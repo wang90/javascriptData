@@ -55,6 +55,40 @@ sort //按照字母顺序对数组排序，支持传入指定排序方法的函�
 toString//将数组作为字符串返回   
 vauleOf//将数组作为字符串返回   
 
+二.栈
+栈是一种遵循从后进先出原则的有序集合
+新添加的或待删除的元素都保存在栈的末尾，称为栈顶，另一端就叫做栈底
+新元素都靠近栈顶，旧元素都接近栈底
+````
+function Stock() {
+    /*创建栈*/
+    var items =[];
+    /*添加栈内元素*/
+    this.push = function (ele) {
+        items.push(ele);
+    }
+    /*返回栈顶部的元素，不做任何处理*/
+    this.peek = function () {
+        return items[items.length-1];
+    }
+    /*移除栈顶元素，返回该元素*/
+    this.pop = function () {
+        return items.pop();
+    }
+    /*清空栈*/
+    this.clear = function () {
+        items =[]
+    }
+    /*查看栈的长度*/
+    this.size = function () {
+        return items.length ;
+    }
+    /*判断是不是为空栈，true为空*/
+    this.isEmpty = function () {
+        return items.length ==0;
+    }
+}
+````
 
 
 
