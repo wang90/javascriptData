@@ -89,6 +89,85 @@ function Stock() {
     }
 }
 ````
+三队列  
+队列是遵循FIEO（Firt In First Out先进先出，也称为先来先服务）原则的有序的项   
+队列在尾部的添加新元素，并从顶部移除元素，最新添加的元素必须排在队列的末尾   
+````
+function Queue(){
+  var items = [];
+  /*向队列尾部添加一个（或多个）新的项*/
+  this.enqueue =function(ele){
+     items.push(ele)
+  };
+  /*移除队列的第一项*/
+  this.dequeue = function(){
+    return items.shift();
+  };
+  /*返回队列中的第一个元素*/
+  this.front = function(){
+    return items[0];
+  };
+  /*队列是否为空*/
+  this.isEmpty = function(){
+    return items.length ==0 ;
+  };
+  /*队列包含的元素个数*/
+  this.size = function(){
+    return items.length;
+  }
+}
+
+````
+队列的变形
+1.优先排队  
+实现优先排队有两种选项
+（1）设置优先级，然后在正确的位置添加元素
+（2）用入列操作添加元素，然后按照优先级移除他们
+````
+function PriorityQueue(){
+  var items = [];
+  /*创建一个队列内容的对象，ele为该元素，prioity为优先等级*/
+  function QueueElement (ele,priority){
+    this.ele = ele;
+    this.priority = priority;
+  };
+  /*向队列尾部添新的项*/
+  this.enqueue = function(ele,priority){
+    var queueElement = new QueueElement(ele,priority);
+    if(this.isEmpty()){
+      items.push(queueElement);
+    }else{
+      var added = false;
+      for(var i = 0 ; i < items.length;i++){
+        if(queueElement.priority < items[i].priority){
+          items.slice(i,0,queueElement);
+          added = true;
+          break;
+        }
+      }
+      if(!added){
+        items.push(queueElement);
+      }
+    }
+  };
+  /*移除队列的第一项*/
+  this.dequeue = function(){
+    return items.shift();
+  };
+  /*返回队列中的第一个元素*/
+  this.front = function(){
+    return items[0];
+  };
+  /*队列是否为空*/
+  this.isEmpty = function(){
+    return items.length ==0 ;
+  };
+  /*队列包含的元素个数*/
+  this.size = function(){
+    return items.length;
+  }
+}
+````
 
 
 
