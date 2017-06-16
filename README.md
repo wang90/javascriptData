@@ -294,7 +294,275 @@ function LinkedList(){
     return string.slice(1);
   }
 }
+````
+*双向链表
+````
+function DoublyLinkedList(){
+  var Node = function(ele){
+    this.ele = ele;
+    this.next = null;
+    this.prev = null;
+  }
+  var length = 0,
+      head =null,
+      tail = null;
+  this.insert = function(position,ele){
+    if(position >=0 && position <=length){
+      var node =new Node(ele),
+        current = head,
+        previous,
+        index =0;
+      if(position ===0 ){
+        if(!head ){
+          head =nodex;
+          tail = node;
+        }else{
+          node.next = current;
+          current.prev = node;
+          head = node;
+        }
+      }else if(position ===length){
+        current = tail;
+        current.next =node;
+        node.prev =current;
+        tail = node;
+      }else{
+        while (index++ <position){
+          previous = current;
+          current = current.next;
+        }
+        node.next = current;
+        previous.next = node;
 
+        current.prev = node;
+        node.prev = previous;
+      }
+      length ++;
+      return true;
+    }else{
+      return false;
+    }
+  };
+  this.removeAt = function(position){
+    if(position >-1 && position <length){
+      var current =head,
+        previous,
+        index =0;
+      if(position ===0){
+        head =current.next;
+        if(length ===1){
+          tail = null;
+        }else{
+          head.prev = null;
+        }
+      }else if(position === length - 1){
+        current = tail;
+        tail = current.prev;
+        tail.next = null;
+      }else{
+        while (index ++ < position){
+          previous = current;
+          current = current.next;
+        }
+        previous.next = current.next;
+        current.next.prev = previous;
+      }
+      length --;
+      return current.ele;
+    }else{
+      return null;
+    }
+  };
+  /*移除列表中的一项*/
+  this.remove = function(ele){
+    var index = this.indexOf(ele);
+    return this.removeAt(index);
+  }
+  /*返回元素在列表中的索引，如果没有返回-1*/
+  this.indexOf = function(ele){
+    var current = head,
+      index=0;
+    while (current){
+      if(ele === current.ele){
+        return index;
+      }
+      index ++;
+      current = current.next;
+    }
+    return -1;
+  }
+  /*列表是不是为空*/
+  this.isEmpty = function(){
+    return length ===0;
+  }
+  /*列表元素的个数*/
+  this.size = function(){
+    return length;
+  }
+  /*列表的第一项*/
+  this.getHead = function(){
+    return head;
+  };
+  /*输出值*/
+  this.toString = function(){
+    var current = head,
+      string ='';
+    while (current){
+      string +=","+current.element;
+      current = current.next;
+    }
+    return string.slice(1);
+  }
+}
+````
+五.集合   
+由一组无序且唯一（既不能重复）的项组成的   
+````
+function Set(){
+  var items = {};
+  this.add = function(value){
+    if(!this.has(value)){
+      items[value] = value;
+       return true;
+    }
+    return false;
+  }
+  this.remove = function(value){
+    if(this.has(value)){
+      delete items[value];
+      return true;
+    }
+    return false;
+  }
+  this.has = function(value){
+    return value in items ;
+  }
+  this.clear = function(){
+    items = {};
+  }
+  this.size = function(){
+    return Object.keys(items).length;
+  };
+  /*size的兼容写法*/
+  this.sizeLegacy = function(){
+    var count = 0 ;
+    for( var prop in items ){
+      if( items.hasOwnProperty(prop))
+        ++count;
+    }
+    return count;
+  }
+  this.values = function(){
+    var keys = [];
+    for( var key in items ){
+      if(items.hasOwnProperty(key)){
+        keys.push(key);
+      }
+    }
+    return keys;
+  };
+
+  /*并集*/
+  this.union = function(otherSet){
+    var unionSet = new Set();
+    var values = this.values();
+    for( var i = 0 ; i < values,length ;i++){
+      unionSet.add(values[i]);
+    }
+    values = otherSet.values();
+    for( var i = 0 ; i <values.length ;i++){
+      unionSet.add(values[i]);
+    }
+    return unionSet;
+  }
+  /*交集*/
+  this.intersection =function(otherSet){
+    var intersectionSet = new Set();
+
+    var values = this.values();
+    for( var i = 0 ; i < values.length ;i++){
+      if( otherSet.has(values[i])){
+        intersectionSet.add(values[i]);
+      }
+    }
+    return intersectionSet;
+  }
+  /*差集*/
+  this.difference = function(otherSet){
+    var differenceSet = new Set();
+    var values = this.values();
+    for( var i = 0 ; i<values.length ;i++){
+      if(!otherSet.has(values[i])){
+        differenceSet .add(values[i]);
+      }
+    }
+    return differenceSet;
+  }
+  /*子集*/
+  this.subset = function(otherSet){
+    if(this.size() >otherSet.size()){
+      return false;
+    }else{
+      var values = this.values();
+      for( var i = 0 ; i < values.length ; i ++){
+        if(!otherSet.has(values[i])){
+          return false;
+        }
+      }
+      return true;
+    }
+  }
+}
+````
+六.字典
+与Set类相似，ES6同样包含了一个MAP类的实现
+````
+function Dictionary(){
+  var items ={};
+  this.set = function(key,value){
+      items[key] = value;
+  }
+  this.remove = function(key){
+      if(this.has(key)){
+        delete items[key];
+        return true;
+      }
+    return false;
+  }
+  this.has = function(key){
+      return key in items;
+  }
+  this.get = function(key){
+      return this.has(key) ? items[key] : undefined;
+  }
+  this.clear = function(){
+    items ={};
+  }
+  this.size = function(){
+    return Object.keys(items).length;
+  };
+  this.keys = function(){
+    var values = [];
+    for( var k in items ){
+      if(this.hasOwnProperty(k)){
+        values.push([k]);
+      }
+    }
+    return values;
+  };
+  this.getItems = function(){
+    return items;
+  }
+  this.values = function(){
+    var values = [];
+    for( var k in items ){
+      if(this.hasOwnProperty(k)){
+        values.push(items[k]);
+      }
+    }
+    return values;
+  }
+}
 ````
 
 
