@@ -89,9 +89,9 @@ function Stock() {
     }
 }
 ````
-三队列  
-队列是遵循FIEO（Firt In First Out先进先出，也称为先来先服务）原则的有序的项   
-队列在尾部的添加新元素，并从顶部移除元素，最新添加的元素必须排在队列的末尾   
+三.队列      
+队列是遵循FIEO（Firt In First Out先进先出，也称为先来先服务）原则的有序的项      
+队列在尾部的添加新元素，并从顶部移除元素，最新添加的元素必须排在队列的末尾      
 ````
 function Queue(){
   var items = [];
@@ -118,11 +118,11 @@ function Queue(){
 }
 
 ````
-队列的变形
+*队列的变形
 1.优先排队  
-实现优先排队有两种选项
-（1）设置优先级，然后在正确的位置添加元素
-（2）用入列操作添加元素，然后按照优先级移除他们
+实现优先排队有两种选项    
+（1）设置优先级，然后在正确的位置添加元素    
+（2）用入列操作添加元素，然后按照优先级移除他们    
 ````
 function PriorityQueue(){
   var items = [];
@@ -166,6 +166,22 @@ function PriorityQueue(){
   this.size = function(){
     return items.length;
   }
+}
+````
+2.循环排队--击鼓传花     
+````
+function hotPotato(nameList,num){
+  var queue = new Queue();
+  for(var i = 0 ; i<nameList,length;i++){
+    queue.enqueue(nameList[i])
+  }
+  var eliminated = '';
+  while (queue.size()>1){
+    for(var i =0 ;i<num;i++){
+      queue.enqueue(queue.dequeue);
+    }
+  }
+  return queue.dequeue();
 }
 ````
 
