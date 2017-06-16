@@ -564,5 +564,179 @@ function Dictionary(){
   }
 }
 ````
+七.散列表   
+
+八.树   
+一种分层数据的抽象模型    
+一个树的结构包含一系列存在父子关系的节点    
+每一个节点都有一个父节点（除了顶部的第一个节点）以及零个或多个子节点     
+
+二叉树    
+二叉树的节点最多只能有点个子节点   
+一个是左侧子节点   
+一个是右侧子节点   
+
+二叉树搜索   
+是二叉树的一种，但是它只允许你在左侧节点存储（比父节点）小的值，    
+在右侧捡点存储（比父节点）大（或者等于）的值
+
+创建 二叉树搜索
+````
+function BinarySearchTree(){
+  var Node = function(key){
+    this.key = key;
+    this.left = null;
+    this.right = null;
+  }
+  var root = null;
+  /*插入一个新的键*/
+  this.insert = function(key){
+      var newNode = new Node(key);
+      if(root ===null){
+        root = newNode;
+      }else{
+        insertNode(root,newNode);
+      }
+  }
+  /*在树种查找一个键，如果节点存在，则返回True,如果不存在，则返回false*/
+  this.search = function(key){
+      return searchNode(root,key);
+  }
+  /*通过中序遍历方式遍历所有节点*/
+  this.inOrderTraverse = function(callback){
+      inOrderTraverseNode(root,callback);
+  }
+  /*通过先序遍历方式遍历所有节点*/
+  this.preOrdTraverse = function(){
+    preOrderTraverseNode(root,callback);
+  }
+  /*通过后序遍历方式遍历所有节点*/
+  this.postOrderTraverse = function(){
+    postOrderTraverseNode(root,callback);
+  }
+  /*返回树中最小的键值*/
+  this.min = function(){
+    return minNode(root);
+  }
+  /*返回树中最大的键值*/
+  this.max = function(){
+    return maxNode(root);
+  }
+  /*从树中移除某个键*/
+  this.remove = function(key){
+      root = removeNode(root,key);
+  }
+  /*辅助函数*/
+  var insertNode = function(node ,newNode){
+    if(newNode.key < node.key){
+      if(node.left ===null){
+        node.left =newNode;
+      } else{
+        insertNode(node.left,newNode);
+      }
+    }else{
+      if(node.right ===null){
+        node.right =newNode;
+      }else{
+        insertNode(node.right,newNode);
+      }
+    }
+  };
+  var inOrderTraverseNode = function(node,callback){
+    if(node !==null){
+      inOrderTraverseNode(node.left,callback);
+      callback(node.key);
+      inOrderTraverseNode(node.right,callback);
+    }
+  };
+  var preOrderTraverseNode = function(node,callback){
+    if(node !==null){
+      callback(node.key);
+      preOrderTraverseNode(node.left,callback);
+      preOrderTraverseNode(node.right,callback);
+    }
+  };
+  var  postOrderTraverseNode = function(node,callback){
+    if(node !== null){
+      postOrderTraverseNode(node.left,callback)
+      postOrderTraverseNode(node.right,callback);
+      callback(node.key);
+    }
+  };
+  var searchNode = function(node,key){
+    if(node ===null){
+      return false;
+    }
+    if(key <node.key){
+      return searchNode(node.left,key);
+    }else if(key >node.key){
+      return searchNode(node.right,key);
+    }else{
+      return true;
+    }
+
+  }
+  var minNode =function(node){
+      if(node) {
+        while (node && node.left !== null) {
+          node = node.left;
+        }
+        return node.key
+      }
+       return null;
+  }
+  var maxNode = function(node){
+    if(node){
+      while (node &&node.right !== null){
+        node =node.right ;
+        return node.key;
+      }
+    }
+    return null;
+  }
+  var removeNode = function(node,key){
+    if(node ==null){
+      return null;
+    }
+    if(key < node.key){
+      node.left =removeNode(node.let,key);
+      return node;
+    }else if(key >node.key){
+      node.right = removeNode(node.right,key);
+      return node;
+    }else{
+      /*情况1：一个叶节点*/
+      if(node.left ===null && node.right ===null ){
+        node = null;
+        return node;
+      }
+      /*情况2：一个只有一个子节点的节点*/
+      if(node.left ===null){
+        node = node.right;
+        return node;
+      }else if(node.right ===null){
+        node = node.left;
+        return node;
+      }
+      /*情况3：一个两个子节点的节点*/
+      var aux = findMinNode(node.right);
+      node.key = aux.key;
+      node.right = removeNode(node.right,aux.key);
+      return node;
+    }
+  }
+  var  findMinNode =function(node){
+    if(node) {
+      while (node && node.left !== null) {
+        node = node.left;
+      }
+      return node;
+    }
+    return null;
+  }
+}
+````
+
+
 
 
