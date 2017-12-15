@@ -92,11 +92,11 @@ netstat网络链接状态信息
 cp拷贝文件 cp -rf workspace/ /home
 gerp -n “12” /root/abc.js /home/123.js 在文件里面是否存12的内容
 
- Find /home -amin -10
-Find  /home -atime -10
-Find /home -cmin -10
-Find /home -ctime +10
-Find /home -size +10k
+find /home -amin -10
+find  /home -atime -10
+find /home -cmin -10
+find /home -ctime +10
+find /home -size +10k
 
 zip -r aa.zip zip 压缩文件夹
 unzip解压
