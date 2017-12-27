@@ -10,3 +10,6 @@ y === 0.1?
 ````
 Math.floor(Math.random()*4) + 1   
 ````
+空数组，空对象为true
+[]==true
+{}==true
