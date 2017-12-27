@@ -27,3 +27,6 @@ function f(){
   console.log(scope); //local
 }
 ````
+
+左值  
+=左边的是左值，如 var age=30，age变量可以作为左值，但不能 30=age  。30不是左值   
