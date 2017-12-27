@@ -30,3 +30,7 @@ function f(){
 
 左值理解  
 =左边的是左值，如 var age=30，age变量可以作为左值，但不能 30=age  。30不是左值   
+
+1+{} //'1[object object]'  
+2+null //2  
+2+ undefined //NaN
