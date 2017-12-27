@@ -16,4 +16,14 @@ Math.floor(Math.random()*4) + 1
 
 x+'' //等价于String(x);   
 +x //等价于Number(x)，可以写成x-0;  
-!!x //等价于Boolean(x);     
+!!x //等价于Boolean(x);  
+
+变量名提升  
+````
+var scope = 'global';
+function f(){
+  console.log(scope); //undefined
+  var scope 'local';  //变量名提升
+  console.log(scope); //local
+}
+````
