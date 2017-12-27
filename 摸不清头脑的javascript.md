@@ -12,4 +12,8 @@ Math.floor(Math.random()*4) + 1
 ````
 空数组，空对象为true   
 []==true   
-{}==true    
+{}==true   
+
+x+'' //等价于String(x);   
++x //等价于Number(x)，可以写成x-0;  
+!!x //等价于Boolean(x);     
