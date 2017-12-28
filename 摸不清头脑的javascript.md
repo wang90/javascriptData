@@ -41,6 +41,13 @@ function f(){
 
 数组  
 数组是值的有序集合，每个值叫做一个元素，而每个元素在数组中有一个位置，以数字表示，称为索引  
+````
+forEach(funciton(val,i,a){
+  console.log(val) //值
+  console.log(i) //index
+  console.log(a) //原始数组
+})
+````
 
 
 
