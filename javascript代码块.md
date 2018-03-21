@@ -20,13 +20,17 @@ function getViewport(){
 function getPagearea(){
 　　　　if (document.compatMode == "BackCompat"){
 　　　　　　return {
-　　　　　　　　width: document.body.scrollWidth,
-　　　　　　　　height: document.body.scrollHeight
+　　　　　　　　width: Math.max(document.body.scrollWidth,
+　　　　　　　　　　　　　　　　document.body.clientWidth),
+　　　　　　　　height: Math.max(document.body.scrollHeight,
+　　　　　　　　　　　　　　　　document.body.clientHeight)
 　　　　　　}
 　　　　} else {
 　　　　　　return {
-　　　　　　　　width: document.documentElement.scrollWidth,
-　　　　　　　　height: document.documentElement.scrollHeight
+　　　　　　　　width: Math.max(document.documentElement.scrollWidth,
+　　　　　　　　　　　　　　　　document.documentElement.clientWidth),
+　　　　　　　　height: Math.max(document.documentElement.scrollHeight,
+　　　　　　　　　　　　　　　　document.documentElement.clientHeight)
 　　　　　　}
 　　　　}
 　　}
