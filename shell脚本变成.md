@@ -42,8 +42,8 @@ expr substr $string $position $length 从position开始，匹配长度为length
  3.程序主流的设计
  
  
- (1)vim example.sh
- (2)
+ (1)vim example.sh    
+ (2)  
  ``````
  #!/bin/bash
 
@@ -103,6 +103,7 @@ do
 	esac
 done
 ``````
+(3)sh example.sh  
  
   
   
