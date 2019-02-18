@@ -109,9 +109,49 @@ done
 三.命令替换  
 语法格式  
 `command`  
-$(command)  
-注：$(())算数运算，例如$((20+30))  
- 
+$(command) 
+例1: 获取计算机中所有用户名称    
+``````
+#!/bin/bash
+#
+
+index=1
+
+for user in `cat /etc/passwd | cut -d ":" -f 1`
+do 
+	echo "This is $index user : $user"
+	index=$(($index+1))
+done
+``````   
+
+例2: 根据系统时间计算今年或明年
+``````
+echo "this is $(date +%Y) year"
+echo "this is $(($(date +%Y)+1)) year"
+``````
+注：$(())算数运算，例如$((20+30))    
+
+例3：根据系统时间获取今年还剩下多少星期，已经过了多少星期
+``````
+echo "this year have passed $(date +%j) days"
+echo "this year have passed $(($(date +%j)/7)) weeks"
+echo "there is $((365-$(date +%j))) days before new year"
+echo "there is $(((365-$(date +%j))/7)) weeks before new year"
+``````
+
+例4: nginx 
+``````
+#!/bin/bash
+#
+
+#echo `(ps -ef | grep nginx | grep -v grep | wc -l)`
+
+nginx_process_num=$(ps -ef | grep nginx | grep -v grep | wc -l)
+
+if [ $nginx_process_num -eq 0 ];then
+	systemctl start nginx
+fi
+``````
   
   
   
