@@ -152,6 +152,24 @@ if [ $nginx_process_num -eq 0 ];then
 	systemctl start nginx
 fi
 ``````
+四.有类型变量
+declare命令参数表
+-r 将变量设为只读
+-i 将变量设为整数
+-a 将变量定义为数组
+``````
+declare -a arrary
+arrary=("1" "2" "3" "4")
+echo $(arrary[@]) //1 2 3 4
+echo $(arrary[1]) //2
+echo $(arrary[0]) //1
+echo $(#arrart[@]) //4
+echo $(#arrart[0]) //1 第一个元素的长度
+``````
+-f 显示此脚本前定义过的所有函数及内容
+-F 仅显示此脚本前定义过的函数名
+-x 将变量声明为环境变量
+注：取消声明的变量减号变+号
   
   
   
