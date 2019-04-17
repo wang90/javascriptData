@@ -170,9 +170,50 @@ echo $(#arrart[0]) //1 第一个元素的长度
 -F 仅显示此脚本前定义过的函数名
 -x 将变量声明为环境变量
 注：取消声明的变量减号变+号
+
+五.数学运算expr  
+两种写法：
+expr $num1 - $num2  
+num3=$(($num1-$num2)) //只能运算加减乘除   
   
-  
-  
+num1 \| num2  
+num1 \& num2  
+num1 \< num2  
+num1 \<= num2  
+num1 \= num2  
+num1 !=num2 
+num1 \> num2    
+num1 \>= num2  
+num1 + num2  
+num1 - num2  
+num1 \* num2  
+num1 / num2    
+num1 % num2  
+
+练习：
+提示用户属于一个正整数num,然后计算1+2+3+...+num的值，必须对num是否为这个你这个念书做判断，
+不符合应该提醒再次输入  
+```
+while true
+do
+   read -p "pls input a positive number:" num
+   expr $num + 1 &> /dev/null
+
+   if [ $? -eq 0 ];then
+       if [ `expr $num \> 0` -eq 1 ];then
+	    for((i=1;i<=$num;i++))    
+	    do  
+		sum=$(($sum+$i))	
+	       # sum=`expr $sum + $i`
+	    done
+	        echo "1+2+3+....+$num = $sum"
+    	        exit
+       fi
+    fi
+    echo "errpr .input enlegal"
+    continue
+done
+```
   
   
   
