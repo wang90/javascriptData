@@ -130,4 +130,31 @@ var quickSort = function(arr) {
 　　return quickSort(left).concat([pivot], quickSort(right));
 
 };
+````    
+滚动到底部   
+````
+    var height = window.innerHeight;
+    var page = 1
+    $(window).on('scroll',function(){
+        if(scrollTop() + (windowHeight()==0?height:windowHeight()) >= documentHeight()){
+            page ++ ;
+        };
+    });
+    function scrollTop(){
+    return Math.max(
+        //chrome
+        document.body.scrollTop,
+        //firefox/IE
+        document.documentElement.scrollTop);
+}
+function documentHeight(){
+    //现代浏览器（IE9+和其他浏览器）和IE8的document.body.scrollHeight和document.documentElement.scrollHeight都可以
+    return Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);
+    // return document.body.scrollHeight==0?document.documentElement.scrollHeight:document.body.scrollHeight;
+}
+function windowHeight(){
+    return (document.compatMode == "CSS1Compat")?
+        document.documentElement.clientHeight:
+        document.body.clientHeight;
+}
 ````
