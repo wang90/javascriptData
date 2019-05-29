@@ -157,4 +157,18 @@ function windowHeight(){
         document.documentElement.clientHeight:
         document.body.clientHeight;
 }
+````     
+某个div滚动到底部    
+````
+    var nScrollHight = 0; //滚动距离总长(注意不是滚动条的长度)
+    var nScrollTop = 0;  //滚动到的当前位置
+    var nDivHight = $('#hot_box').height();
+    var page = 1;
+    $('#hot_box').on('scroll',function(){
+        nScrollHight = $(this)[0].scrollHeight;
+        h_nScrollTop = $(this)[0].scrollTop;
+        if(nScrollTop + nDivHight >= nScrollHight){
+            page++;
+        } 
+    });
 ````
