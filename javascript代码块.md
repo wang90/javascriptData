@@ -206,5 +206,34 @@ function parseURL(url) {
     };
 }
 ````
+xhr兼容性    
+````
+function createXMLHttpObject() {
+    var XHRFactory = [
+    function () {
+            return new XMLHttpRequest();
+    },
+    function () {
+            return new ActiveXObject('Msxml2.XMLHTTP');
+    },
+    function () {
+            return new ActiveXObject('Msxml3.XMLHTTP');
+    },
+    function () {
+            return new ActiveXObject('Microsoft.XMLHTTP');
+    }
+  ];
+    var xhr = false;
+    for (var i = 0; i < XHRFactory.length; i++) {
+        try {
+            xhr = XHRFactory[i]();
+        } catch (e) {
+            continue;
+        }
+        break;
+    }
+    return xhr;
+}
+````
 
 
