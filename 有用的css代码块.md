@@ -6,3 +6,9 @@
   -khtml-user-select: none; /*早期浏览器*/
   user-select: none;
 ````
+单行变成...
+````
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+````
