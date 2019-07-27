@@ -35,12 +35,12 @@ rm package-lock.json
 $npm install
 ``````
   
-react 使用ant     
+react 使用antd    
   https://ant.design/docs/react/introduce-cn
 ``````
 npm install antd --save
 ``````
-如果想使用ant中的less    
+如果想使用antd中的less    
  引入antd中less    
  ``````
  @import '~antd/dist/antd.less';
