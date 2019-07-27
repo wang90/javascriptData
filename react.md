@@ -28,6 +28,12 @@ git add .
 git commit -m 'Saving before ejecting'     
 npm run eject     
 ```````
+在成功后最好执行下
+``````
+rm -rf node_modules
+rm package-lock.json
+$npm install
+``````
   
 react 使用ant     
   https://ant.design/docs/react/introduce-cn
