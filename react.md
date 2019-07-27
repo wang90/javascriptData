@@ -70,6 +70,7 @@ npm install antd --save
           ),
     },
  ``````
+ 下载babel-plugin
  ``````
  npm install babel-plugin-import --save-dev
  ``````
