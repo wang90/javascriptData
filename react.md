@@ -41,6 +41,11 @@ react 使用ant
 npm install antd --save
 ``````
 如果想使用ant中的less    
+ 引入antd中less    
+ ``````
+ @import '~antd/dist/antd.less';
+ @impotr 'xxx.less';
+ ``````
  下载less  less-loader     
  ``````
  npm install less less-loader --save-dev
