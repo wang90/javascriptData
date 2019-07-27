@@ -29,3 +29,47 @@ git commit -m 'Saving before ejecting'
 npm run eject     
 ```````
   
+react 使用ant     
+  https://ant.design/docs/react/introduce-cn
+``````
+npm install antd --save
+``````
+如果想使用ant中的less    
+ 下载less  less-loader     
+ ``````
+ npm install less less-loader --save-dev
+ ``````
+ 修改webpack.config.js中      
+ 第42行     
+ ``````
+ const lessRegex = /\.(less)$/;
+ const lessModuleRegex = /\.module\.(less)$/;  
+ ``````
+ 456行
+ ``````
+  {
+    test: lessRegex,
+    exclude: lessModuleRegex,
+    use: getStyleLoaders({ importLoaders: 3 }, 'less-loader'),          
+   },
+   {
+     test: lessModuleRegex,
+     use: getStyleLoaders(
+          {
+             importLoaders: 3,
+             modules: true,
+             getLocalIdent: getCSSModuleLocalIdent,
+             modifyVars:{
+                'primary-color': '#1DA57A',
+                'link-color': '#1DA57A',  
+                 'border-radius-base': '2px',
+             },
+             javascriptEnabled: true,
+           },
+           'less-loader'
+          ),
+    },
+ ``````
+ ``````
+ npm install babel-plugin-import --save-dev
+ ``````
