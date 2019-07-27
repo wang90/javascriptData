@@ -1,10 +1,14 @@
-react-app脚手架   
+react-app脚手架  
+``````
 npm install -g create-react-app   
 create-react-app xxx 
 npm start 启动
+``````
  
-react-app没有webpack问题：     
+react-app没有webpack问题：    
+``````
 npm run eject    
+``````
 如果报错：
 ``````
 Remove untracked files, stash or commit any changes, and try again.
@@ -18,8 +22,10 @@ npm ERR! This is probably not a problem with npm. There is likely additional log
 npm ERR! A complete log of this run can be found in:
 npm ERR!     /Users/wang90/.npm/_logs/2019-07-27T06_35_39_275Z-debug.log     
 ``````
-属于没有提交任何内容，需要      
+属于没有提交任何内容，需要     
+``````
 git add .     
 git commit -m 'Saving before ejecting'     
 npm run eject     
+```````
   
