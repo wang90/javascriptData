@@ -80,3 +80,26 @@ npm install antd --save
  ``````
  npm install babel-plugin-import --save-dev
  ``````
+ 在package.json中babel添加
+ ``````
+  "plugins": [
+      [
+        "import",
+        {
+          "libraryName": "antd",
+          "style": true
+        }
+      ]
+    ]
+ ``````
+ 此时npm start 如果如下报错
+ ``````
+ ./node_modules/antd/lib/grid/style/index.less (./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-7-1!./node_modules/postcss-loader/src??postcss!./node_modules/less-loader/dist/cjs.js??ref--6-oneOf-7-3!./node_modules/antd/lib/grid/style/index.less)
+
+// https://github.com/ant-design/ant-motion/issues/44
+.bezierEasingMixin();
+ ``````
+ 请修改less版本号，因为只能使用<3.0.0
+ ``````
+ npm install less@^2.7.3
+ ``````
