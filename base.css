@@ -17,6 +17,8 @@ html,body{
     font-size: 16px!important;
 }
 
+ul,ol,li{list-style:none;}
+
 /*行内块元素*/
 input,img{
     margin: 0;
