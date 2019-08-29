@@ -11,4 +11,9 @@ git status
 ``````
 git rebase 的优点    
 1.合并 commit 记录，保持分支整洁；   
-2.相比 merge 来说会减少分支合并的记录；   
+2.相比 merge 来说会减少分支合并的记录；    
+
+git pull = git fetch + git merge   
+
+git修改分支名字   
+git branch -m oldbranchname newbranchname    
