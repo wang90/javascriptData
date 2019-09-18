@@ -1,4 +1,5 @@
-# react-app脚手架  
+### react各种问题
+#### react-app脚手架  
 ``````
 npm install -g create-react-app   
 create-react-app xxx 
