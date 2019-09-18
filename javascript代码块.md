@@ -1,5 +1,5 @@
 
-捕捉页面大小
+### 捕捉页面大小
 ````
 function getViewport(){
 　　　　if (document.compatMode == "BackCompat"){
@@ -15,7 +15,7 @@ function getViewport(){
 　　　　}
 　　}
 ````
-捕捉滚动视觉页面大小
+### 捕捉滚动视觉页面大小
 ````
 function getPagearea(){
 　　　　if (document.compatMode == "BackCompat"){
@@ -61,7 +61,7 @@ function getElementLeft(element){
 　　　　return actualTop;
 　　}
 ````
-获取元素相对位置
+### 获取元素相对位置
 ````
 function getElementViewLeft(element){
 　　　　var actualLeft = element.offsetLeft;
@@ -96,7 +96,7 @@ function getElementViewTop(element){
     return actualTop-elementScrollTop;
 }
 ````
-快速排序
+### 快速排序
 ````
 var quickSort = function(arr) {
 
@@ -128,7 +128,7 @@ var quickSort = function(arr) {
 
 };
 ````    
-滚动到底部   
+### 滚动到底部   
 ````
     var height = window.innerHeight;
     var page = 1
@@ -155,7 +155,7 @@ function windowHeight(){
         document.body.clientHeight;
 }
 ````     
-某个div滚动到底部    
+### 某个div滚动到底部    
 ````
     var nScrollHight = 0; //滚动距离总长(注意不是滚动条的长度)
     var nScrollTop = 0;  //滚动到的当前位置
@@ -169,7 +169,7 @@ function windowHeight(){
         } 
     });
 ````
-url整理    
+### url整理    
 ````
 function parseURL(url) {
     var a = document.createElement('a');
@@ -203,7 +203,7 @@ function parseURL(url) {
     };
 }
 ````
-xhr兼容性    
+### xhr兼容性    
 ````
 function createXMLHttpObject() {
     var XHRFactory = [
