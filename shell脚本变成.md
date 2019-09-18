@@ -1,4 +1,4 @@
-一.变量替换  
+### 一.变量替换  
  ${变量#匹配规则}   从头开始匹配，最短删除    
  ${变量##匹配规则}  从头开始匹配，最长删除    
  ${变量%匹配规则}   从尾开始匹配，最短删除  
@@ -6,7 +6,7 @@
  ${变量/旧字符串/新字符串}  替换变量内的旧字符串为新字符串,只替换题第一个  
  ${变量//旧字符串/新字符串} 替换变量内的就字符串为薪资复还，全部替换  
    
-二.字符串处理    
+### 二.字符串处理    
 （1）计算字符串长度    
 ${#string}  
 expr length "$string"  
@@ -23,7 +23,7 @@ expr substr $string $position $length 从position开始，匹配长度为length
 注：expr 索引从1开始 ，${str}索引长度从0开始
 
 
-练习：
+#### 练习：
 需求描述：变量string="Bigdata process framework is Hadoop,Hadoop is an open source project"
 (1).打印string长度
 (2).删除字符串汇总所有的Hadoop
@@ -106,11 +106,11 @@ done
 (3)sh example.sh    
 
 
-三.命令替换  
+### 三.命令替换  
 语法格式  
 `command`  
 $(command) 
-例1: 获取计算机中所有用户名称    
+##### 例1: 获取计算机中所有用户名称    
 ``````
 #!/bin/bash
 #
@@ -124,14 +124,14 @@ do
 done
 ``````   
 
-例2: 根据系统时间计算今年或明年
+##### 例2: 根据系统时间计算今年或明年
 ``````
 echo "this is $(date +%Y) year"
 echo "this is $(($(date +%Y)+1)) year"
 ``````
 注：$(())算数运算，例如$((20+30))    
 
-例3：根据系统时间获取今年还剩下多少星期，已经过了多少星期
+##### 例3：根据系统时间获取今年还剩下多少星期，已经过了多少星期
 ``````
 echo "this year have passed $(date +%j) days"
 echo "this year have passed $(($(date +%j)/7)) weeks"
@@ -139,7 +139,7 @@ echo "there is $((365-$(date +%j))) days before new year"
 echo "there is $(((365-$(date +%j))/7)) weeks before new year"
 ``````
 
-例4: nginx 
+##### 例4: nginx 
 ``````
 #!/bin/bash
 #
@@ -152,7 +152,7 @@ if [ $nginx_process_num -eq 0 ];then
 	systemctl start nginx
 fi
 ``````
-四.有类型变量
+### 四.有类型变量
 declare命令参数表
 -r 将变量设为只读
 -i 将变量设为整数
@@ -171,7 +171,7 @@ echo $(#arrart[0]) //1 第一个元素的长度
 -x 将变量声明为环境变量
 注：取消声明的变量减号变+号
 
-五.数学运算expr  
+### 五.数学运算expr  
 两种写法：
 expr $num1 - $num2  
 num3=$(($num1-$num2)) //只能运算加减乘除   
