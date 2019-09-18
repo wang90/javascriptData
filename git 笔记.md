@@ -9,7 +9,6 @@ git stash pop //恢复最新的进度到工作区
 git status
 
 ``````
-***
 
 git commit --amend追加提交
 
@@ -32,14 +31,11 @@ drop：我要丢弃该commit（缩写:d）
 4）多余文件内的#注释掉     
 5）git rebase --abort撤销   
 
-***
-
 git pull = git fetch + git merge     
 
-git修改分支名字   
+### git修改分支名字   
 git branch -m oldbranchname newbranchname      
 
-***
 
 
 # code review 的缩略词语！  
