@@ -1,4 +1,4 @@
-同步代码
+### 同步代码
 ``````
 git status
 git stash //保存当前工作进度
@@ -9,6 +9,7 @@ git stash pop //恢复最新的进度到工作区
 git status
 
 ``````
+***
 
 git commit --amend追加提交
 
