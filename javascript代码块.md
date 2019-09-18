@@ -35,7 +35,7 @@ function getPagearea(){
 　　　　}
 　　}
 ````
-获取元素绝对定位位置
+### 获取元素绝对定位位置
 ````
 function getElementLeft(element){
 　　　　var actualLeft = element.offsetLeft;
