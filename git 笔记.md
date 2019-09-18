@@ -37,7 +37,7 @@ git修改分支名字
 git branch -m oldbranchname newbranchname       
 
 
-code review 的缩略词语！  
+# code review 的缩略词语！  
 PR: Pull Request. 拉取请求，给其他项目提交代码   
 LGTM: Looks Good To Me. 朕知道了 代码已经过 review，可以合并   
 SGTM: Sounds Good To Me. 和上面那句意思差不多，也是已经通过了 review 的意思    
