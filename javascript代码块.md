@@ -233,7 +233,7 @@ function createXMLHttpObject() {
 }
 ````
 
-###格式化视频、音频时长     
+### 格式化视频、音频时长     
 ````
 function format_duration(time) {
   if (time > -1) {
