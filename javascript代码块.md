@@ -203,7 +203,7 @@ function parseURL(url) {
     };
 }
 ````
-### xhr兼容性    
+### xhr兼容性   
 ````
 function createXMLHttpObject() {
     var XHRFactory = [
@@ -233,4 +233,30 @@ function createXMLHttpObject() {
 }
 ````
 
+###格式化视频、音频时长     
+````
+function format_duration(time) {
+  if (time > -1) {
+    var hour = Math.floor(time / 3600);
+    var min = Math.floor(time / 60) % 60;
+    var sec = time % 60;
+    if (hour < 10) {
+      time = "0" + hour + ":";
+    } else {
+      time = hour + ":";
+    }
 
+    if (min < 10) {
+      time += "0";
+    }
+    time += min + ":";
+
+    if (sec < 10) {
+      time += "0";
+    }
+    time += sec;
+  }
+  return time;
+}
+
+````
