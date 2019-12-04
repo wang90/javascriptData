@@ -260,3 +260,14 @@ function format_duration(time) {
 }
 
 ````
+###去除html标签
+```
+function delHtmlTag(str)
+{
+      return str.replace(/<[^>]+>/g,"");//去掉所有的html标记
+}
+```
+###统计字数
+```
+t = $('.remarktext').html().replace(/<[^>]+>/g,"").length
+```
