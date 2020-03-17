@@ -271,3 +271,33 @@ function delHtmlTag(str)
 ```
 t = $('.remarktext').html().replace(/<[^>]+>/g,"").length
 ```
+
+### 防抖和截流函数
+```
+let deBounce = (fn, delay) => {
+    let timer = null;
+    return function (...args) {
+        if (timer) {
+            clearTimeout(timer);
+        }
+ 
+        timer = setTimeout(()=> {
+            fn(...args);
+        }, delay)
+    }
+}
+ 
+ 
+let throttle = (fn, delay) => {
+    let flag = true;
+    return function (...args) {
+        if (!flag) return;
+        flag = false;
+        setTimeout(() => {
+            fn(...args);
+            flag = true;
+        }, delay)
+    }
+}
+```
+
