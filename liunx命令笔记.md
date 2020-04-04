@@ -103,6 +103,10 @@ zip -r aa.zip zip 压缩文件夹
 unzip解压  
 
 
-
-
+###编辑快捷命令    
+``````
+vim .bash_profile
+alias qc='commod'
+source .bash_profile
+``````
 
