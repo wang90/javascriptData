@@ -4,7 +4,7 @@ shutdown -r now 现在重新启动
 reboot 现在重启计
 ``````
 
-###vi编辑器 使用  
+### vi编辑器 使用  
 ``````
 1.vi hello.js  
 2.输入i[进入插入模式]  
@@ -18,42 +18,42 @@ pwd 查看当前目录
   
  
 
-####Linux 目录  
-####root 存放root用户的相关文件  
-####home 存放普通用户的相关文件  
-####bin 存放常用命令  
-####sbin 要具有一定权限才能使用的命令  
-####mnt 默认挂在光驱和软驱的根目录  
-####boot 存放引相关的文件  
-####etc 存放配置相关的文件  
-####var 存放经常变化的数据  
+#### Linux 目录  
+#### root 存放root用户的相关文件  
+#### home 存放普通用户的相关文件  
+#### bin 存放常用命令  
+#### sbin 要具有一定权限才能使用的命令  
+#### mnt 默认挂在光驱和软驱的根目录  
+#### boot 存放引相关的文件  
+#### etc 存放配置相关的文件  
+#### var 存放经常变化的数据  
  
-####添加用户命令  
+#### 添加用户命令  
 ``````
 useradd 小明  
 password  
 ``````
-####文件操作  
+#### 文件操作  
 ``````
 mkdir建立目录  
 touch新建空目录  
 cp复制  
 ``````
-####管道命令 |
+#### 管道命令 |
 ``````
 more  分页显示  
 Less  显示文件内容带分页  
 grep 在文本中检查内容 
 ``````
 
-####询问使用man + 命令  
+#### 询问使用man + 命令  
 ``````
 find /name  
 ls -l >a.txt 列表的内容写入文件a.txt中（覆盖写)  
 ls -al >> aa.txt 列表的内容追加到哪见aa.txt的末尾  
 ``````
 
-####查看linux所有组的信息  
+#### 查看linux所有组的信息  
 ``````
 cat /etc/group  
 vi /etc/group 
@@ -78,14 +78,14 @@ env [该命令可以显示当前操作系统的环境变量]
 chsh -s 输入信的shell /bin/bash   
 ``````
 
-#####history查看历史  
+##### history查看历史  
 ``````
 ！xxx执行该条历史的命令  
 
 tcp/ip 一组协议（tcp, ip,udp,arp,rarp等协议）  
 ``````
 
-#####追踪路由命令  
+##### 追踪路由命令  
 ``````
 traceroute + 网址  
 windows下查看ip地址 ipconfig  
@@ -93,7 +93,7 @@ Linux下查看ip地址 ifconfig
 netsend “xxx” 192.168.255.255 局域网广播  
 ``````
 
-####配置ip  
+#### 配置ip  
 ``````
 第一种方法  
 Setup进入配置界面  
@@ -102,14 +102,14 @@ Setup进入配置界面
 Ifconfig eth0  xxx.xxx.xx.xx 对网卡进行设置  
 ``````
 
-####crontab任务调度命令  
+#### crontab任务调度命令  
 ``````
 1.crontab -e  
 2.每隔一定时间执行命令  
 1.crontab -r取消调度  
 ``````
 
-####netstat 目前系统在监听的内容  
+#### netstat 目前系统在监听的内容  
 ``````
 ps -avx显示进程  
 kill +进程号 -9 强制结束  
@@ -137,9 +137,7 @@ zip -r aa.zip zip 压缩文件夹
 unzip解压  
 ``````
 
-
-
-###编辑快捷命令    
+### 编辑快捷命令    
 ``````
 vim .bash_profile
 alias qc='commod'
