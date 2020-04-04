@@ -29,3 +29,13 @@
   var fontsize = 10 * (docEl.clientWidth / 320) + 'px';
   docEl.style.fontSize = fontsize;
 ````
+网站灰色css属性
+``````
+<style>
+        <!--
+          html {
+            filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+            -webkit-filter: grayscale(100%);}
+        -->
+</style>
+``````
