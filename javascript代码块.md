@@ -300,4 +300,15 @@ let throttle = (fn, delay) => {
     }
 }
 ```
-
+### 加入flash脚本
+``````
+<!-- [if IE]>
+<object id ="move" type="application/x-shockwave-flash" width="300" height="300">
+   <param name="movie" value="mymovie.swf">
+</object>
+<![endif]--><!--[if !IE]><-->
+<embed name="movie" type="application/x-shockwave-flash"
+    src="mymovie.swf" width="300" height="300">
+<embed>
+<!--> <![endif]-->
+``````
