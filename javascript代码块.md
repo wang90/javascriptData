@@ -312,3 +312,24 @@ let throttle = (fn, delay) => {
 <embed>
 <!--> <![endif]-->
 ``````
+### 生成文件并利用formdata通过ajax上传 
+``````
+      var blob = new Blob([content], {
+        type: "text/plain;charset=utf-8",
+      });
+      var file = new File([blob], filename);
+      var formData = new FormData();
+      formData.append("file", file);
+      $.ajax({
+        type: "post",
+        url: url,
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function (response) {
+
+        },
+        error: function (err) {
+        },
+      });
+``````
