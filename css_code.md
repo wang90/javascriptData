@@ -1,4 +1,5 @@
-禁止页面选中
+# 常用css代码块
+### 禁止页面选中
 ````
  -moz-user-select: none; /*火狐*/
   -webkit-user-select: none;  /*webkit浏览器*/
@@ -6,13 +7,13 @@
   -khtml-user-select: none; /*早期浏览器*/
   user-select: none;
 ````
-单行变成...
+### 单行变成...
 ````
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 ````
-手机端1像素问题   
+### 手机端1像素问题   
 ````
   var viewport = document.querySelector("meta[name=viewport]");
   //下面是根据设备像素设置viewport
@@ -29,7 +30,7 @@
   var fontsize = 10 * (docEl.clientWidth / 320) + 'px';
   docEl.style.fontSize = fontsize;
 ````
-网站灰色css属性
+### 网站灰色css属性
 ``````
 <style>
         <!--
