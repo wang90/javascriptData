@@ -7,7 +7,6 @@ git rebase origin/master
 git status
 git stash pop //恢复最新的进度到工作区
 git status
-
 git commit --amend追加提交
 ``````
 ### git rebase 的优点   
@@ -52,7 +51,7 @@ $ git diff --cached
 $ git diff HEAD
 ``````
 
-# code review 的缩略词语！  
+### code review 的缩略词语！  
 * PR: Pull Request. 拉取请求，给其他项目提交代码   
 * LGTM: Looks Good To Me. 朕知道了 代码已经过 review，可以合并   
 * SGTM: Sounds Good To Me. 和上面那句意思差不多，也是已经通过了 review 的意思    
