@@ -12,7 +12,8 @@ git status
 
 git commit --amend追加提交
 
-### git rebase 的优点    
+### git rebase 的优点   
+`````
 1.合并 commit 记录，保持分支整洁；     
 2.相比 merge 来说会减少分支合并的记录；     
 合并commit步骤    
@@ -30,11 +31,28 @@ exec：执行shell命令（缩写:x）
 drop：我要丢弃该commit（缩写:d）    
 4）多余文件内的#注释掉     
 5）git rebase --abort撤销   
+git pull = git fetch + git merge 
+```````
 
-git pull = git fetch + git merge     
+    
 
-### git修改分支名字   
-git branch -m oldbranchname newbranchname      
+### git修改分支名字 
+``````
+git branch -m oldbranchname newbranchname    
+``````
+
+###diff
+显示当前工作空间和提交的不同
+``````
+# 显示工作目录和索引的不同
+$ git diff
+
+# 显示索引和最近一次提交的不同
+$ git diff --cached
+
+# 显示工作目录和最近一次提交的不同
+$ git diff HEAD
+``````
 
 
 
