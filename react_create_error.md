@@ -1,12 +1,12 @@
 # react 搭建遇到的问题
-#### react-app脚手架  
+#### react-app 脚手架  
 ``````
 npm install -g create-react-app   
 create-react-app xxx 
 npm start 启动
 ``````
  
-#### react-app没有webpack问题：    
+#### react-app 没有 webpack 问题：    
 ``````
 npm run eject    
 ``````
@@ -42,22 +42,22 @@ react 使用antd
 npm install antd --save
 ``````
 如果想使用antd中的less    
- 引入antd中less    
+ 引入 antd 中 less    
  ``````
  @import '~antd/dist/antd.less';
  @impotr 'xxx.less';
  ``````
- 下载less  less-loader     
+ 下载 less  less-loader     
  ``````
  npm install less less-loader --save-dev
  ``````
- 修改webpack.config.js中      
- 第42行     
+ 修改 webpack.config.js 中      
+ 第 42 行     
  ``````
  const lessRegex = /\.(less)$/;
  const lessModuleRegex = /\.module\.(less)$/;  
  ``````
- 456行
+ 第 456 行
  ``````
   {
     test: lessRegex,
@@ -82,11 +82,11 @@ npm install antd --save
           ),
     },
  ``````
- 下载babel-plugin
+ 下载 babel-plugin
  ``````
  npm install babel-plugin-import --save-dev
  ``````
- 在package.json中babel添加
+ 在 package.json 中 babel 添加
  ``````
   "plugins": [
       [
@@ -98,14 +98,14 @@ npm install antd --save
       ]
     ]
  ``````
- 此时npm start 如果如下报错
+ 此时 npm start 如果如下报错
  ``````
  ./node_modules/antd/lib/grid/style/index.less (./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-7-1!./node_modules/postcss-loader/src??postcss!./node_modules/less-loader/dist/cjs.js??ref--6-oneOf-7-3!./node_modules/antd/lib/grid/style/index.less)
 
 // https://github.com/ant-design/ant-motion/issues/44
 .bezierEasingMixin();
  ``````
- 请修改less版本号，因为只能使用<3.0.0
+ 请修改 less 版本号，因为只能使用 <3.0.0
  ``````
  npm install less@^2.7.3
  ``````
