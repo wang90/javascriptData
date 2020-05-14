@@ -8,10 +8,8 @@ git status
 git stash pop //恢复最新的进度到工作区
 git status
 
-``````
-
 git commit --amend追加提交
-
+``````
 ### git rebase 的优点   
 `````
 1.合并 commit 记录，保持分支整洁；     
@@ -41,7 +39,7 @@ git pull = git fetch + git merge
 git branch -m oldbranchname newbranchname    
 ``````
 
-###diff
+### diff
 显示当前工作空间和提交的不同
 ``````
 # 显示工作目录和索引的不同
@@ -53,8 +51,6 @@ $ git diff --cached
 # 显示工作目录和最近一次提交的不同
 $ git diff HEAD
 ``````
-
-
 
 # code review 的缩略词语！  
 * PR: Pull Request. 拉取请求，给其他项目提交代码   
