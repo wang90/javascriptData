@@ -24,4 +24,4 @@
 [* shell脚本编程](https://github.com/wang90/notes/blob/master/shell_script.md)
 
 ## react
-[* react搭建时候遇到的问题](https://github.com/wang90/notes/blob/master/react.md)
+[* react脚手架报错](https://github.com/wang90/notes/blob/master/react.md)
