@@ -1,4 +1,4 @@
-# 工作中代码开发随笔
+# 工作随笔
 
 ## CSS
 [* css重置浏览器base文件](https://github.com/wang90/notes/blob/master/base.css)    
