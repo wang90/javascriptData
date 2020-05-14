@@ -1,7 +1,7 @@
 # 工作中代码开发随笔
 
 ## CSS
-[+base.css](https://github.com/wang90/notes/blob/master/base.css)    
+[* base.css](https://github.com/wang90/notes/blob/master/base.css)    
 [* css设计指南笔记](https://github.com/wang90/notes/blob/master/css_design_duide.md)    
 [* 常用的css代码块](https://github.com/wang90/notes/blob/master/css_code.md)    
 
