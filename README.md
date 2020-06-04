@@ -28,3 +28,5 @@
 
 ## vue
 #### [仿写vue](https://github.com/wang90/vue_demo)
+#### [vue-IntlTelInput](https://github.com/wang90/vue-IntlTelInput)
+#### [自定义vue插件](https://github.com/wang90/vue-plugs)
