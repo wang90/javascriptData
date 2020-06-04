@@ -30,3 +30,7 @@
 #### [仿写vue双向数据绑定](https://github.com/wang90/vue_demo)
 #### [vue-IntlTelInput](https://github.com/wang90/vue-IntlTelInput)
 #### [自定义vue插件](https://github.com/wang90/vue-plugs)
+
+## 其他
+#### [web读取文件](https://github.com/wang90/webReadFile)
+#### [web保存文件](https://github.com/wang90/FileSaver.js)
