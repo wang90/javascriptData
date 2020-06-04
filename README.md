@@ -27,6 +27,6 @@
 #### [react脚手架报错](https://github.com/wang90/notes/blob/master/react_create_error.md)
 
 ## vue
-#### [仿写vue](https://github.com/wang90/vue_demo)
+#### [仿写vue双向数据绑定](https://github.com/wang90/vue_demo)
 #### [vue-IntlTelInput](https://github.com/wang90/vue-IntlTelInput)
 #### [自定义vue插件](https://github.com/wang90/vue-plugs)
