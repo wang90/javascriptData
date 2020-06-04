@@ -34,6 +34,9 @@
 ## shell
 #### [shell脚本编程](https://github.com/wang90/notes/blob/master/shell_script.md)
 
+## Promise
+#### [深入理解Promise](https://github.com/wang90/Promise)
+
 ## 其他
 #### [web读取文件](https://github.com/wang90/webReadFile)
 #### [FileSaver.js](https://github.com/wang90/FileSaver.js)
