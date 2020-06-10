@@ -1,11 +1,11 @@
-### vue 常用代码块
+## vue 常用代码块
 
-#### 绑定background-image
+### 绑定 background-image
 ```````
 <div class="circular" v-bind:style="{ backgroundImage: { url(image) }"></div>
 ```````
 
-#### css 使用样式隔离
+### css 使用样式隔离
 ##### - 使用 ::v-deep
 ```````
 <style lang="less" scoped>
@@ -18,7 +18,7 @@
 }
 </style>
 ```````
-###### - 使用scss
+##### - 使用 scss
 ```````
 <style lang="scss" scoped>
 .file-textarea {
@@ -29,9 +29,8 @@
   }
 }
 </style>
-```````
+
 需在vue.config.js添加
-```````
 {
     test: /\.vue$/,
     loader: "vue-loader",
