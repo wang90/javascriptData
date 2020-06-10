@@ -13,6 +13,14 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 ````
+### 多行...
+`````
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;（行数）
+    -webkit-box-orient: vertical;
+`````
 ### 手机端1像素问题   
 ````
   var viewport = document.querySelector("meta[name=viewport]");
