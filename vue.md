@@ -5,8 +5,8 @@
 <div class="circular" v-bind:style="{ backgroundImage: { url(image) }"></div>
 ```````
 
-#### css使用样式隔离
-- 使用 ::v-deep
+#### css 使用样式隔离
+##### - 使用 ::v-deep
 ```````
 <style lang="less" scoped>
 .file-textarea {
@@ -18,7 +18,7 @@
 }
 </style>
 ```````
-2.使用scss
+###### - 使用scss
 ```````
 <style lang="scss" scoped>
 .file-textarea {
