@@ -15,4 +15,4 @@ defaults write com.apple.dock springboard-columns -int 8
 ```````
 defaults write com.apple.dock ResetLaunchPad -bool TRUE;killall Dock
 ```````
-### [下载链接](https://sourabhbajaj.com/mac-setup/SublimeText/)
+### [应用下载:https://sourabhbajaj.com/mac-setup/SublimeText/](https://sourabhbajaj.com/mac-setup/SublimeText/)
