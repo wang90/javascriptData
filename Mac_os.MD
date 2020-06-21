@@ -1,4 +1,8 @@
-#### 修改应用图标命令
+### brew
+``````
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+``````
+### 修改应用图标命令
 - 调整每一列显示图标数量，7 表示每一列显示7个
 ```````
 defaults write com.apple.dock springboard-rows -int 7
