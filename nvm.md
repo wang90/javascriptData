@@ -35,6 +35,7 @@ nvm use --delete-prefix v14.5.0
 nvm is not compatible with the npm config "prefix" option: currently set to "/usr/local" 
 Run `npm config delete prefix` or `nvm use --delete-prefix v14.5.0 --silent` to unset it.
 ```````
+解决方案
 ``````
 nvm use --delete-prefix v14.5.0 --silent // 确保npm命令可以使用
 npm config delete prefix // 删除 nvm prefix；
