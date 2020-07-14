@@ -27,3 +27,14 @@ Run `nvm use --delete-prefix v14.5.0 --silent` to unset it
 nvm use node
 nvm use --delete-prefix v14.5.0
 ``````
+#### 每次终端启动nvm 解决
+每次启动nvm后会显示下面的话
+```````
+nvm is not compatible with the npm config "prefix" option: currently set to "/usr/local" 
+Run `npm config delete prefix` or `nvm use --delete-prefix v14.5.0 --silent` to unset it.
+```````
+``````
+nvm use --delete-prefix v14.5.0 --silent // 确保npm命令可以使用
+npm config delete prefix // 删除 nvm prefix；
+npm config set prefix $NVM_DIR/versions/node/v14.5.0  // 设置 nvm prefix 为v14.5.0 
+``````
