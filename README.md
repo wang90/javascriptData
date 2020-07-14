@@ -14,6 +14,9 @@
 ## git
 #### [git使用笔记](https://github.com/wang90/notes/blob/master/git.md)
 
+## node
+#### [nvm常见问题](https://github.com/wang90/notes/blob/master/nvm.md)
+
 ## 小程序
 #### [小程序生成图片(前端+后端)](https://github.com/wang90/wxapp-CreateCanvas)
 
@@ -24,6 +27,7 @@
 #### [仿写vue双向数据绑定](https://github.com/wang90/vue_demo)
 #### [vue-IntlTelInput](https://github.com/wang90/vue-IntlTelInput)
 #### [自定义vue插件](https://github.com/wang90/vue-plugs)
+#### [vue学习笔记](https://www.yuque.com/wang90/omlote/zzyrag)
 
 ## linux
 #### [linux命令](https://github.com/wang90/notes/blob/master/liunx_command.md)
