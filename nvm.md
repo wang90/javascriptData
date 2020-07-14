@@ -21,16 +21,18 @@ nvm use default
 nvm use node
 ``````
 ### nvm use node 失败
+出现问题
 ```````
 nvm is not compatible with the npm config "prefix" option: currently set to "/usr/local/Cellar/nvm/0.27.1/versions/node/v4.1.1"
 Run `nvm use --delete-prefix v14.5.0 --silent` to unset it
 ```````
+解决方案
 ``````
 nvm use node
 nvm use --delete-prefix v14.5.0
 ``````
-### 每次终端启动nvm 解决
-每次启动nvm后会显示下面的话
+### 每次终端启动 nvm 解决
+每次启动 nvm 后会显示下面的话
 ```````
 nvm is not compatible with the npm config "prefix" option: currently set to "/usr/local" 
 Run `npm config delete prefix` or `nvm use --delete-prefix v14.5.0 --silent` to unset it.
