@@ -75,6 +75,14 @@ git fetch --all
 $ git reset --hard origin/master 
 $ git pull
 ```````
+### 修改 github 项目语言
+```
+// vi .gitattributes
+*.js linguist-language=python
+*.css linguist-language=python
+*.html linguist-language=python
+// :wq
+```
 
 
 
