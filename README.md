@@ -28,6 +28,7 @@
 #### [vue-IntlTelInput](https://github.com/wang90/vue-IntlTelInput)
 #### [自定义vue插件](https://github.com/wang90/vue-plugs)
 #### [vue学习笔记](https://www.yuque.com/wang90/omlote/zzyrag)
+#### [vue项目创建汇总](https://github.com/wang90/notes/blob/master/vue-cli-project.md)
 
 ## linux
 #### [linux命令](https://github.com/wang90/notes/blob/master/liunx_command.md)
