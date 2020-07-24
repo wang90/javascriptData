@@ -13,7 +13,7 @@ npm run dev
 npm run-script build 
 ``````
 
-## 项目中加入less
+## 加入less
 ##### 下载less
 ``````
 npm i style-resources-loader vue-cli-plugin-style-resources-loader -D
@@ -28,4 +28,12 @@ pluginOptions: {
       }
 }
 ``````
+## 修改路径
+##### vue.config.js修改路径路径
+``````
+outputDir: 'dist', // 输出文件路径
+indexPath:"../index.html", // 输出index路径
+publicPath:"./dist/", // 设置 index相对路径
+``````
+   
 
