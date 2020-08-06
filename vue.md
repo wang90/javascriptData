@@ -1,4 +1,4 @@
-## vue 常用代码块
+## vue开发中的模凌两可使用
 
 ### 绑定 background-image
 ```````
