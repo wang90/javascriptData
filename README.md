@@ -33,8 +33,8 @@
 ## linux
 #### [linux命令](https://github.com/wang90/notes/blob/master/liunx_command.md)
 #### book
-#### [《鸟哥的Linux私房菜（基础学习篇）》](http://linux.vbird.org/linux_basic/)
-#### [《The Linux Command Line》](http://linuxcommand.org/tlcl.php)
+##### [《鸟哥的Linux私房菜（基础学习篇）》](http://linux.vbird.org/linux_basic/)
+##### [《The Linux Command Line》](http://linuxcommand.org/tlcl.php)
 
 
 ## nginx
