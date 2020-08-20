@@ -46,7 +46,7 @@
 ## Promise
 #### [深入理解Promise](https://github.com/wang90/Promise)
 
-## 其他信息
+## 更多内容
 #### [web读取文件](https://github.com/wang90/webReadFile)
 #### [FileSaver.js](https://github.com/wang90/FileSaver.js)
 
