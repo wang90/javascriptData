@@ -2,84 +2,84 @@
 ### 捕捉页面大小
 ````
 function getViewport(){
-　　　　if (document.compatMode == "BackCompat"){
-　　　　　　return {
-　　　　　　　　width: document.body.clientWidth,
-　　　　　　　　height: document.body.clientHeight
-　　　　　　}
-　　　　} else {
-　　　　　　return {
-　　　　　　　　width: document.documentElement.clientWidth,
-　　　　　　　　height: document.documentElement.clientHeight
-　　　　　　}
-　　　　}
-　　}
+    if (document.compatMode == "BackCompat"){
+        return {
+            width: document.body.clientWidth,
+　　　　　　　height: document.body.clientHeight
+　　　　　}
+    } else {
+　　　　　return {
+　　　　　　　width: document.documentElement.clientWidth,
+　　　　　　　height: document.documentElement.clientHeight
+　　　　　}
+    }
+}
 ````
 ### 捕捉滚动视觉页面大小
 ````
 function getPagearea(){
-　　　　if (document.compatMode == "BackCompat"){
-　　　　　　return {
-　　　　　　　　width: Math.max(document.body.scrollWidth,
-　　　　　　　　　　　　　　　　document.body.clientWidth),
-　　　　　　　　height: Math.max(document.body.scrollHeight,
-　　　　　　　　　　　　　　　　document.body.clientHeight)
-　　　　　　}
-　　　　} else {
-　　　　　　return {
-　　　　　　　　width: Math.max(document.documentElement.scrollWidth,
-　　　　　　　　　　　　　　　　document.documentElement.clientWidth),
-　　　　　　　　height: Math.max(document.documentElement.scrollHeight,
-　　　　　　　　　　　　　　　　document.documentElement.clientHeight)
-　　　　　　}
-　　　　}
-　　}
+    if (document.compatMode == "BackCompat"){
+        return {
+            width: Math.max(document.body.scrollWidth,
+                document.body.clientWidth),
+            height: Math.max(document.body.scrollHeight,
+                document.body.clientHeight)
+        }
+    } else {
+        return {
+            width: Math.max(document.documentElement.scrollWidth,
+                document.documentElement.clientWidth),
+            height: Math.max(document.documentElement.scrollHeight,
+                document.documentElement.clientHeight)
+        }
+    }
+}
 ````
 ### 获取元素绝对定位位置
 ````
 function getElementLeft(element){
-　　　　var actualLeft = element.offsetLeft;
-　　　　var current = element.offsetParent;
+    var actualLeft = element.offsetLeft;
+    var current = element.offsetParent;
 
-　　　　while (current !== null){
-　　　　　　actualLeft += current.offsetLeft;
-　　　　　　current = current.offsetParent;
-　　　　}
+    while (current !== null){
+        actualLeft += current.offsetLeft;
+        current = current.offsetParent;
+    }
 
-　　　　return actualLeft;
-　　}
+    return actualLeft;
+}
 
-　　function getElementTop(element){
-　　　　var actualTop = element.offsetTop;
-　　　　var current = element.offsetParent;
+function getElementTop(element){
+    var actualTop = element.offsetTop;
+    var current = element.offsetParent;
 
-　　　　while (current !== null){
-　　　　　　actualTop += current.offsetTop;
-　　　　　　current = current.offsetParent;
-　　　　}
+    while (current !== null){
+        actualTop += current.offsetTop;
+        current = current.offsetParent;
+    }
 
-　　　　return actualTop;
-　　}
+    return actualTop;
+}
 ````
 ### 获取元素相对位置
 ````
 function getElementViewLeft(element){
-　　　　var actualLeft = element.offsetLeft;
-　　　　var current = element.offsetParent;
+    var actualLeft = element.offsetLeft;
+    var current = element.offsetParent;
 
-　　　　while (current !== null){
-　　　　　　actualLeft += current.offsetLeft;
-　　　　　　current = current.offsetParent;
-　　　　}
+    while (current !== null){
+        actualLeft += current.offsetLeft;
+        current = current.offsetParent;
+    }
 
-　　　　if (document.compatMode == "BackCompat"){
-　　　　　　var elementScrollLeft=document.body.scrollLeft;
-　　　　} else {
-　　　　　　var elementScrollLeft=document.documentElement.scrollLeft; 
-　　　　}
+    if (document.compatMode == "BackCompat"){
+        var elementScrollLeft=document.body.scrollLeft;
+    } else {
+        var elementScrollLeft=document.documentElement.scrollLeft; 
+    }
 
-　　　　return actualLeft-elementScrollLeft;
-　　}
+    return actualLeft-elementScrollLeft;
+}
 function getElementViewTop(element){
     var actualTop = element.offsetTop;
     var current = element.offsetParent;
