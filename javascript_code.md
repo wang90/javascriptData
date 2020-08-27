@@ -144,11 +144,13 @@ var quickSort = function(arr) {
         //firefox/IE
         document.documentElement.scrollTop);
 }
+
 function documentHeight(){
     //现代浏览器（IE9+和其他浏览器）和IE8的document.body.scrollHeight和document.documentElement.scrollHeight都可以
     return Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);
     // return document.body.scrollHeight==0?document.documentElement.scrollHeight:document.body.scrollHeight;
 }
+
 function windowHeight(){
     return (document.compatMode == "CSS1Compat")?
         document.documentElement.clientHeight:
@@ -157,17 +159,17 @@ function windowHeight(){
 ````     
 ### 某个div滚动到底部    
 ````
-    var nScrollHight = 0; //滚动距离总长(注意不是滚动条的长度)
-    var nScrollTop = 0;  //滚动到的当前位置
-    var nDivHight = $('#hot_box').height();
-    var page = 1;
-    $('#hot_box').on('scroll',function(){
-        nScrollHight = $(this)[0].scrollHeight;
-        h_nScrollTop = $(this)[0].scrollTop;
-        if(nScrollTop + nDivHight >= nScrollHight){
-            page++;
-        } 
-    });
+var nScrollHight = 0; //滚动距离总长(注意不是滚动条的长度)
+var nScrollTop = 0;  //滚动到的当前位置
+var nDivHight = $('#hot_box').height();
+var page = 1;
+$('#hot_box').on('scroll',function(){
+    nScrollHight = $(this)[0].scrollHeight;
+    h_nScrollTop = $(this)[0].scrollTop;
+    if(nScrollTop + nDivHight >= nScrollHight){
+        page++;
+    } 
+});
 ````
 ### url整理    
 ````
@@ -264,7 +266,7 @@ function format_duration(time) {
 ```
 function delHtmlTag(str)
 {
-      return str.replace(/<[^>]+>/g,"");//去掉所有的html标记
+    return str.replace(/<[^>]+>/g,"");//去掉所有的html标记
 }
 ```
 ### 统计字数
