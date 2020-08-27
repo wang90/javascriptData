@@ -31,7 +31,7 @@ ${string:position:length}  // 从position开始，匹配长度为length
 ${string:-position}        // 从右边开始匹配     
 ${string:(position)}       // 从左边开始匹配  
 expr substr $string $position $length  // 从position开始，匹配长度为length  
-// 注：expr 索引从1开始 ，${str}索引长度从0开始
+注：expr 索引从1开始 ，${str}索引长度从0开始
 ```````
 
 
