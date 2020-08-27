@@ -1,28 +1,38 @@
 # shell 脚本编程
 
 ### 一.变量替换  
- ${变量#匹配规则}   从头开始匹配，最短删除    
- ${变量##匹配规则}  从头开始匹配，最长删除    
- ${变量%匹配规则}   从尾开始匹配，最短删除  
- ${变量%%匹配规则}  从尾开始匹配，最长删除  
- ${变量/旧字符串/新字符串}  替换变量内的旧字符串为新字符串,只替换题第一个  
- ${变量//旧字符串/新字符串} 替换变量内的就字符串为薪资复还，全部替换  
+`````
+ ${变量#匹配规则}   // 从头开始匹配，最短删除    
+ ${变量##匹配规则}  // 从头开始匹配，最长删除    
+ ${变量%匹配规则}   // 从尾开始匹配，最短删除  
+ ${变量%%匹配规则}  // 从尾开始匹配，最长删除  
+ ${变量/旧字符串/新字符串}  // 替换变量内的旧字符串为新字符串,只替换题第一个  
+ ${变量//旧字符串/新字符串} // 替换变量内的就字符串为薪资复还，全部替换  
+`````
    
-### 二.字符串处理    
-1）计算字符串长度    
+### 二.字符串处理  
+1）计算字符串长度 
+``````
 ${#string}  
 expr length "$string"  
-2)获取子串在字符中的索引位置  
+``````
+2)获取子串在字符中的索引位置 
+``````
 expr index $string $substring  
+``````
 3)获取子串长度  
+````````
 expr match $string substr   
-4)抽取子串   
-${string:position}         从string中的position开始     
-${string:position:length}  从position开始，匹配长度为length    
-${string:-position}        从右边开始匹配     
-${string:(position)}       从左边开始匹配  
-expr substr $string $position $length 从position开始，匹配长度为length  
-注：expr 索引从1开始 ，${str}索引长度从0开始
+````````
+4)抽取子串 
+```````
+${string:position}         // 从string中的position开始     
+${string:position:length}  // 从position开始，匹配长度为length    
+${string:-position}        // 从右边开始匹配     
+${string:(position)}       // 从左边开始匹配  
+expr substr $string $position $length  // 从position开始，匹配长度为length  
+// 注：expr 索引从1开始 ，${str}索引长度从0开始
+```````
 
 
 #### 练习：
