@@ -9,7 +9,9 @@
 #### [常用javscript代码块](https://github.com/wang90/notes/blob/master/javascript/javascript_code.md)    
 #### [javascript学习链接](https://github.com/wang90/notes/blob/master/javascript/javscript_url.md)    
 #### [javascript数据结构](https://github.com/wang90/notes/blob/master/javascript/javascript_dataStructure.md)    
-#### [有趣的JavaScript](https://github.com/wang90/notes/blob/master/javascript/javascript_interesting.md)   
+#### [有趣的JavaScript](https://github.com/wang90/notes/blob/master/javascript/javascript_interesting.md) 
+#### [-链接 现代javascript官方](https://zh.javascript.info/)
+
 
 ## git
 #### [git使用笔记](https://github.com/wang90/notes/blob/master/git/git.md)
