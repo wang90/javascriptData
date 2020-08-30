@@ -42,8 +42,8 @@
 }
 ```````
 
-##### - 利用vue.prototype绑定全局变量提示报错
-[在ts中的使用]
+### - 利用vue.prototype绑定全局变量提示报错
+##### [在ts中的使用]
 ```````
 // main.ts
 Vue.prototype.$api = xxxx
