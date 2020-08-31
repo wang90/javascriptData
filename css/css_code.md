@@ -1,11 +1,11 @@
 # 常用css代码块
 ### 禁止页面选中
 ````
- -moz-user-select: none; /*火狐*/
-  -webkit-user-select: none;  /*webkit浏览器*/
-  -ms-user-select: none;   /*IE10*/
-  -khtml-user-select: none; /*早期浏览器*/
-  user-select: none;
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none;  /*webkit浏览器*/
+    -ms-user-select: none;   /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
 ````
 ### 单行变成...
 ````
