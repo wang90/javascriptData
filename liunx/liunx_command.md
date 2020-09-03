@@ -104,6 +104,7 @@ Ifconfig eth0  xxx.xxx.xx.xx 对网卡进行设置
 
 #### crontab任务调度命令  
 ``````
+# 查看 crontab -l 
 1.crontab -e  
 2.每隔一定时间执行命令  
 1.crontab -r取消调度  
