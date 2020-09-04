@@ -83,7 +83,10 @@ $ git pull
 *.html linguist-language=python
 // :wq
 ```
-
+### 查看git config
+```````
+git config --global  --list
+```````
 
 
 
