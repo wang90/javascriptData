@@ -404,4 +404,19 @@ function osplant() {
   return os;
 }
 ``````
+### 手机端长按删除
+```````
+let startTimer = '';
+let endTimer = '';
+const dom = xxx
+dom.addEventListener('touchstart', function (e) {
+    startTimer = +new Date();
+})
+dom.addEventListener('touchend',function (e) {
+    endTimer = +new Date()
+    if (endTimer - startTimer > 700) {
+        // code 长按
+    }
+})
+```````
 
