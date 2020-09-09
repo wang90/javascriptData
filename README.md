@@ -3,7 +3,8 @@
 ## CSS
 #### [css重置浏览器base文件](https://github.com/wang90/notes/blob/master/css/base.css)    
 #### [css设计指南笔记](https://github.com/wang90/notes/blob/master/css/css_design_duide.md)    
-#### [常用的css代码块](https://github.com/wang90/notes/blob/master/css/css_code.md)    
+#### [常用的css代码块](https://github.com/wang90/notes/blob/master/css/css_code.md)  
+#### [天气icon动画](https://github.com/wang90/notes/blob/master/css/weather.less)
 
 ## javascript
 #### [常用javscript代码块](https://github.com/wang90/notes/blob/master/javascript/javascript_code.md)    
