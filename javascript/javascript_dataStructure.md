@@ -18,22 +18,23 @@ arr.shift(); 删除元素的第一个，并且返回这个元素
 1）二维数组   
 创建二维数据  
 ````
-var averageTemp = 0;    
-    averageTemp[0] =[];     
-    averageTemp[0][0] =72;  
-    averageTemp[0][1] =75;  
-    averageTemp[0][2] =79;  
-    averageTemp[0][3] =79;  
-    averageTemp[0][4] =81;  
-    averageTemp[0][5] =81;  
-    averageTemp[1] =[];         
-    averageTemp[1][0] =81;  
-    averageTemp[1][1] =79;  
-    averageTemp[1][2] =75;  
-    averageTemp[1][3] =75;  
-    averageTemp[1][4] =73;  
-    averageTemp[1][4] =73;  
+var averageTemp       = 0;    
+    averageTemp[0]    = [];     
+    averageTemp[0][0] = 72;  
+    averageTemp[0][1] = 75;  
+    averageTemp[0][2] = 79; 
+    averageTemp[0][3] = 79;  
+    averageTemp[0][4] = 81;  
+    averageTemp[0][5] = 81;  
+    averageTemp[1]    = [];         
+    averageTemp[1][0] = 81;  
+    averageTemp[1][1] = 79;  
+    averageTemp[1][2] = 75;  
+    averageTemp[1][3] = 75;  
+    averageTemp[1][4] = 73;  
+    averageTemp[1][4] = 73;  
     
+prinMatrix (averageTemp);
 function prinMatrix (myMatrix) {
     for(var i = 0 ; i<myMatrix.length;i++){
         for(var j = 0 ; j < myMatrix[i].length ;j++){
@@ -41,7 +42,7 @@ function prinMatrix (myMatrix) {
         }
     }
 }
-prinMatrix (averageTemp)；
+
 ````
 
 4.数组的方法  
