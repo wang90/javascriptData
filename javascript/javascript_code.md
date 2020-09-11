@@ -2,6 +2,7 @@
 ### 捕捉页面大小
 ````
 function getViewport(){
+
     if (document.compatMode == "BackCompat"){
         return {
             width: document.body.clientWidth,
@@ -64,6 +65,7 @@ function getElementTop(element){
 ### 获取元素相对位置
 ````
 function getElementViewLeft(element){
+
     var actualLeft = element.offsetLeft;
     var current = element.offsetParent;
 
@@ -130,14 +132,17 @@ var quickSort = function(arr) {
 ````    
 ### 滚动到底部   
 ````
-    var height = window.innerHeight;
-    var page = 1
-    $(window).on('scroll',function(){
-        if(scrollTop() + (windowHeight()==0?height:windowHeight()) >= documentHeight()){
-            page ++ ;
-        };
-    });
-    function scrollTop(){
+var height = window.innerHeight;
+var page = 1
+    
+$(window).on('scroll',function(){
+    
+    if(scrollTop() + (windowHeight()==0?height:windowHeight()) >= documentHeight()){
+        page ++ ;
+    };
+});
+
+function scrollTop(){
     return Math.max(
         //chrome
         document.body.scrollTop,
@@ -163,19 +168,25 @@ var nScrollHight = 0; //滚动距离总长(注意不是滚动条的长度)
 var nScrollTop = 0;  //滚动到的当前位置
 var nDivHight = $('#hot_box').height();
 var page = 1;
+
 $('#hot_box').on('scroll',function(){
+
     nScrollHight = $(this)[0].scrollHeight;
     h_nScrollTop = $(this)[0].scrollTop;
+    
     if(nScrollTop + nDivHight >= nScrollHight){
         page++;
     } 
+    
 });
 ````
 ### url整理    
 ````
 function parseURL(url) {
+
     var a = document.createElement('a');
     a.href = url;
+    
     return {
         source: url,
         protocol: a.protocol.replace(':', ''),
@@ -234,7 +245,6 @@ function createXMLHttpObject() {
     return xhr;
 }
 ````
-
 ### 格式化视频、音频时长     
 ````
 function format_duration(time) {
@@ -260,7 +270,6 @@ function format_duration(time) {
   }
   return time;
 }
-
 ````
 ### 去除html标签
 ```
@@ -273,7 +282,6 @@ function delHtmlTag(str)
 ```
 t = $('.remarktext').html().replace(/<[^>]+>/g,"").length
 ```
-
 ### 防抖和截流函数
 ```
 let deBounce = (fn, delay) => {
