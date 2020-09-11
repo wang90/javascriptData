@@ -101,26 +101,26 @@ function Stock() {
 队列是遵循FIEO（Firt In First Out先进先出，也称为先来先服务）原则的有序的项      
 队列在尾部的添加新元素，并从顶部移除元素，最新添加的元素必须排在队列的末尾      
 ````
-function Queue(){
+function Queue() {
   var items = [];
   /*向队列尾部添加一个（或多个）新的项*/
-  this.enqueue =function(ele){
+  this.enqueue =function(ele) {
      items.push(ele)
   };
   /*移除队列的第一项*/
-  this.dequeue = function(){
+  this.dequeue = function() {
     return items.shift();
   };
   /*返回队列中的第一个元素*/
-  this.front = function(){
+  this.front = function() {
     return items[0];
   };
   /*队列是否为空*/
-  this.isEmpty = function(){
+  this.isEmpty = function() {
     return items.length ==0 ;
   };
   /*队列包含的元素个数*/
-  this.size = function(){
+  this.size = function() {
     return items.length;
   }
 }
@@ -132,60 +132,60 @@ function Queue(){
 （1）设置优先级，然后在正确的位置添加元素    
 （2）用入列操作添加元素，然后按照优先级移除他们    
 ````
-function PriorityQueue(){
+function PriorityQueue() {
   var items = [];
   /*创建一个队列内容的对象，ele为该元素，prioity为优先等级*/
-  function QueueElement (ele,priority){
+  function QueueElement (ele,priority) {
     this.ele = ele;
     this.priority = priority;
   };
   /*向队列尾部添新的项*/
-  this.enqueue = function(ele,priority){
+  this.enqueue = function(ele,priority) {
     var queueElement = new QueueElement(ele,priority);
-    if(this.isEmpty()){
+    if( this.isEmpty() ) {
       items.push(queueElement);
-    }else{
+    } else {
       var added = false;
-      for(var i = 0 ; i < items.length;i++){
-        if(queueElement.priority < items[i].priority){
+      for (var i = 0 ; i < items.length; i++ ) {
+        if ( queueElement.priority < items[i].priority ) {
           items.slice(i,0,queueElement);
           added = true;
           break;
         }
       }
-      if(!added){
+      if ( !added ) {
         items.push(queueElement);
       }
     }
   };
   /*移除队列的第一项*/
-  this.dequeue = function(){
+  this.dequeue = function() {
     return items.shift();
   };
   /*返回队列中的第一个元素*/
-  this.front = function(){
+  this.front = function() {
     return items[0];
   };
   /*队列是否为空*/
-  this.isEmpty = function(){
+  this.isEmpty = function() {
     return items.length ==0 ;
   };
   /*队列包含的元素个数*/
-  this.size = function(){
+  this.size = function() {
     return items.length;
   }
 }
 ````
 2.循环排队--击鼓传花     
 ````
-function hotPotato(nameList,num){
+function hotPotato (nameList,num) {
   var queue = new Queue();
   for(var i = 0 ; i<nameList,length;i++){
     queue.enqueue(nameList[i])
   }
   var eliminated = '';
-  while (queue.size()>1){
-    for(var i =0 ;i<num;i++){
+  while (queue.size()>1) {
+    for(  var i =0 ;i < num; i++ ) {
       queue.enqueue(queue.dequeue);
     }
   }
@@ -195,22 +195,22 @@ function hotPotato(nameList,num){
 ### 四.链表    
 存储有序的元素集合   
 ````
-function LinkedList(){
-  var Node = function(ele){
+function LinkedList() {
+  var Node = function(ele) {
     this.ele = ele;
     this.next = null;
   }
   var length = 0;
   var head = null;
   /*添加尾部新的项*/
-  this.append = function(ele){
+  this.append = function(ele) {
     var node = new Node(ele),
         current;
-    if(head ==null){
+    if ( head == null) {
       head =node;
-    }else{
+    } else {
       current = head ;
-      while (current.next){
+      while (current.next) {
         current = current.next;
       }
       current.next = node;
@@ -218,8 +218,8 @@ function LinkedList(){
     length++;
   };
   /*添加插入一个新的的项*/
-  this.insert = function(position,ele){
-      if(position >=0 && position <=length){
+  this.insert = function (position,ele) {
+      if(position >=0 && position <= length) {
         var node = new Node(ele),
         current = head ,
         previous,
@@ -228,7 +228,7 @@ function LinkedList(){
            node.next =current;
            head = node ;
         }else{
-          while (index ++<position){
+          while (index ++ < position) {
             previous = current;
             current =current.next;
           }
@@ -242,8 +242,8 @@ function LinkedList(){
       }
   }
   /*移除列表中特定位置的一项*/
-  this.removeAt = function(position){
-    if(position>-1 && position<length){
+  this.removeAt = function ( position ) {
+    if(position>-1 && position<length) {
       var current = head,
         previous,
         index =0;
@@ -267,11 +267,11 @@ function LinkedList(){
     return this.removeAt(index);
   }
   /*返回元素在列表中的索引，如果没有返回-1*/
-  this.indexOf = function(ele){
+  this.indexOf = function (ele) {
     var current = head,
       index=0;
-    while (current){
-      if(ele === current.ele){
+    while (current) {
+      if(ele === current.ele) {
         return index;
       }
       index ++;
@@ -280,22 +280,22 @@ function LinkedList(){
     return -1;
   }
   /*列表是不是为空*/
-  this.isEmpty = function(){
+  this.isEmpty = function () {
     return length ===0;
   }
   /*列表元素的个数*/
-  this.size = function(){
+  this.size = function () {
     return length;
   }
   /*列表的第一项*/
-  this.getHead = function(){
+  this.getHead = function () {
     return head;
   };
   /*输出值*/
-  this.toString = function(){
+  this.toString = function () {
     var current = head,
       string ='';
-    while (current){
+    while (current) {
       string +=","+current.element;
       current = current.next;
     }
@@ -305,8 +305,8 @@ function LinkedList(){
 ````
 *双向链表
 ````
-function DoublyLinkedList(){
-  var Node = function(ele){
+function DoublyLinkedList () {
+  var Node = function(ele) {
     this.ele = ele;
     this.next = null;
     this.prev = null;
@@ -314,8 +314,8 @@ function DoublyLinkedList(){
   var length = 0,
       head =null,
       tail = null;
-  this.insert = function(position,ele){
-    if(position >=0 && position <=length){
+  this.insert = function ( position,ele) {
+    if(position >= 0 && position <=  length) {
       var node =new Node(ele),
         current = head,
         previous,
@@ -329,13 +329,13 @@ function DoublyLinkedList(){
           current.prev = node;
           head = node;
         }
-      }else if(position ===length){
+      }else if( position ===length ) {
         current = tail;
         current.next =node;
         node.prev =current;
         tail = node;
-      }else{
-        while (index++ <position){
+      } else {
+        while (index++ <position) {
           previous = current;
           current = current.next;
         }
@@ -351,23 +351,23 @@ function DoublyLinkedList(){
       return false;
     }
   };
-  this.removeAt = function(position){
-    if(position >-1 && position <length){
+  this.removeAt = function (position) {
+    if ( position >-1 && position <length ){
       var current =head,
         previous,
         index =0;
-      if(position ===0){
+      if ( position ===0 ) {
         head =current.next;
-        if(length ===1){
+        if ( length ===1) {
           tail = null;
-        }else{
+        } else {
           head.prev = null;
         }
-      }else if(position === length - 1){
+      } else if( position === length - 1 ) {
         current = tail;
         tail = current.prev;
         tail.next = null;
-      }else{
+      } else {
         while (index ++ < position){
           previous = current;
           current = current.next;
@@ -377,20 +377,20 @@ function DoublyLinkedList(){
       }
       length --;
       return current.ele;
-    }else{
+    } else {
       return null;
     }
   };
   /*移除列表中的一项*/
-  this.remove = function(ele){
+  this.remove = function (ele) {
     var index = this.indexOf(ele);
     return this.removeAt(index);
   }
   /*返回元素在列表中的索引，如果没有返回-1*/
-  this.indexOf = function(ele){
+  this.indexOf = function(ele) {
     var current = head,
       index=0;
-    while (current){
+    while (current) {
       if(ele === current.ele){
         return index;
       }
@@ -400,7 +400,7 @@ function DoublyLinkedList(){
     return -1;
   }
   /*列表是不是为空*/
-  this.isEmpty = function(){
+  this.isEmpty = function () {
     return length ===0;
   }
   /*列表元素的个数*/
@@ -408,14 +408,14 @@ function DoublyLinkedList(){
     return length;
   }
   /*列表的第一项*/
-  this.getHead = function(){
+  this.getHead = function () {
     return head;
   };
   /*输出值*/
-  this.toString = function(){
+  this.toString = function () {
     var current = head,
       string ='';
-    while (current){
+    while (current) {
       string +=","+current.element;
       current = current.next;
     }
@@ -426,33 +426,33 @@ function DoublyLinkedList(){
 ### 五.集合   
 由一组无序且唯一（既不能重复）的项组成的   
 ````
-function Set(){
+function Set() {
   var items = {};
-  this.add = function(value){
-    if(!this.has(value)){
+  this.add = function (value) {
+    if ( !this.has(value) ) {
       items[value] = value;
        return true;
     }
     return false;
   }
-  this.remove = function(value){
-    if(this.has(value)){
+  this.remove = function(value) {
+    if ( this.has(value) ) {
       delete items[value];
       return true;
     }
     return false;
   }
-  this.has = function(value){
+  this.has = function(value) {
     return value in items ;
   }
-  this.clear = function(){
+  this.clear = function() {
     items = {};
   }
-  this.size = function(){
+  this.size = function() {
     return Object.keys(items).length;
   };
   /*size的兼容写法*/
-  this.sizeLegacy = function(){
+  this.sizeLegacy = function() {
     var count = 0 ;
     for( var prop in items ){
       if( items.hasOwnProperty(prop))
@@ -460,10 +460,10 @@ function Set(){
     }
     return count;
   }
-  this.values = function(){
+  this.values = function() {
     var keys = [];
-    for( var key in items ){
-      if(items.hasOwnProperty(key)){
+    for ( var key in items ) {
+      if (items.hasOwnProperty(key)) {
         keys.push(key);
       }
     }
@@ -471,24 +471,24 @@ function Set(){
   };
 
   /*并集*/
-  this.union = function(otherSet){
+  this.union = function (otherSet) {
     var unionSet = new Set();
     var values = this.values();
     for( var i = 0 ; i < values,length ;i++){
       unionSet.add(values[i]);
     }
     values = otherSet.values();
-    for( var i = 0 ; i <values.length ;i++){
+    for ( var i = 0 ; i <values.length ;i++) {
       unionSet.add(values[i]);
     }
     return unionSet;
   }
   /*交集*/
-  this.intersection =function(otherSet){
+  this.intersection = function(otherSet) {
     var intersectionSet = new Set();
 
     var values = this.values();
-    for( var i = 0 ; i < values.length ;i++){
+    for( var i = 0 ; i < values.length ;i++) {
       if( otherSet.has(values[i])){
         intersectionSet.add(values[i]);
       }
@@ -496,7 +496,7 @@ function Set(){
     return intersectionSet;
   }
   /*差集*/
-  this.difference = function(otherSet){
+  this.difference = function(otherSet) {
     var differenceSet = new Set();
     var values = this.values();
     for( var i = 0 ; i<values.length ;i++){
