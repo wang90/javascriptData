@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./node_modules/vconsole/dist/vconsole.min.js"></script>
+</head>
+<body>
+    test vconsole
+   
+    <script>
+       
+        const  urlPlugin = new VConsole.VConsolePlugin('url_plugin', 'Url Plugin');
+        console.log('vcosle is runnning')
+        urlPlugin.on('init', function() {
+	        console.log('url plugin init');
+        });
+        urlPlugin.on('renderTab', function(callback) {
+            const url  = window.location;
+            const html = `<div style="padding:5px 10px;">
+                <div style="text-align: center;font-size:15px;">window location 信息</div>
+                <div>地址 : ${url.href}</div>
+                <div>域名 : ${url.hostname}</div>
+                <div>路径 : ${url.pathname}</div>
+                <div>端口 : ${url.port}</div>
+                <div>参数 : ${url.search}</div>
+                <div>hash : ${url.hash}</div>
+                </div>           
+            `;
+            // html += '<div>hostname : </div>'
+	        callback(html);
+        });
+        urlPlugin.on('addTool', function(callback) {
+	        var button = {
+		        name: 'Reload',
+		        onClick: function(event) {
+			        location.reload();
+		        }
+	        };
+	        callback([button]);
+        });
+
+        const vConsole  = new VConsole();
+        vConsole.addPlugin(urlPlugin);
+    </script>
+</body>
+</html>
