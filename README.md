@@ -21,10 +21,10 @@
 #### [nvm 常见问题](https://github.com/wang90/notes/blob/master/node/nvm.md)
 
 ## 小程序
-#### [小程序生成图片(前端+后端)](https://github.com/wang90/wxapp-CreateCanvas)
+#### [小程序生成图片( 前端 + 后端 )](https://github.com/wang90/wxapp-CreateCanvas)
 
 ## react
-#### [react脚手架报错修复过程汇总](https://github.com/wang90/notes/blob/master/react/react_create_error.md)
+#### [react 脚手架报错修复过程汇总](https://github.com/wang90/notes/blob/master/react/react_create_error.md)
 
 ## vue
 #### [仿写 vue 双向数据绑定](https://github.com/wang90/vue_demo)
