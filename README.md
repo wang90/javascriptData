@@ -53,6 +53,10 @@
 #### [ web 读取文件 ](https://github.com/wang90/webReadFile)
 #### [ FileSaver.js ](https://github.com/wang90/FileSaver.js)
 
+## WEB 相对常用网站链接
+#### [中文站-Mozilla大宝库](https://developer.mozilla.org/zh-CN/docs/Web) 
+#### [英文站-StackOverflow](https://stackoverflow.com/)
+
 
 
 
