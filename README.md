@@ -20,7 +20,9 @@
 #### [ git 使用笔记 ](https://github.com/wang90/notes/blob/master/git/git.md)
 
 ## node
-#### [ nvm 常见问题 ](https://github.com/wang90/notes/blob/master/node/nvm.md)
+#### [ nvm 常见问题 ](https://github.com/wang90/notes/blob/master/node/nvm使用手册.md)
+#### [ nrm 使用 ](https://github.com/wang90/notes/blob/master/node/nrm使用手册.md)
+#### [ 使用vconsole添加tab.html ](https://github.com/wang90/notes/blob/master/node/%E4%BD%BF%E7%94%A8vconsole%E6%B7%BB%E5%8A%A0tab.html)
 
 ## 小程序
 #### [ 小程序生成图片( 前端 + 后端 ) ](https://github.com/wang90/wxapp-CreateCanvas)
