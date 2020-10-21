@@ -1,7 +1,7 @@
 ## NRM 使用 
 ###  下载
 ``````
-npm  install   -g   nrm
+npm install -g nrm
 ``````
 ###  查看
 ``````
