@@ -105,6 +105,25 @@ $ git pull
 git config --global  --list
 ```````
 
+### 工作中不想提交，但是需要保存的方法
+##### 保存到待存取
+````````
+git stash save 'push to stash area'
+````````
+##### 查看暂存区
+````````
+git stash list
+````````
+##### 获取暂存区内容
+````````
+# 获取
+git stash apply stash@{0}
+# 删除
+git stash drop stash@{0}
+# or
+stash pop
+````````
+
 
 
 
