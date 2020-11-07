@@ -130,6 +130,9 @@ git tag v1.0 e39d0b2
 git checkout v1.0
 ``````
 
-
+### 查看远程映射
+``````
+git remote -v
+``````
 
 
