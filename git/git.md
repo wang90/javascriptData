@@ -124,6 +124,12 @@ git stash drop stash@{0}
 stash pop
 ````````
 
+### 打标签
+``````
+git tag v1.0 e39d0b2
+git checkout v1.0
+``````
+
 
 
 
