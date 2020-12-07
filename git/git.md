@@ -92,6 +92,12 @@ git fetch --all
 $ git reset --hard origin/master 
 $ git pull
 ```````
+### 强制覆盖远程分支
+```````
+#git push origin 分支名 --force
+git push origin master --force
+```````
+
 ### 修改 github 项目语言
 ```
 // vi .gitattributes
