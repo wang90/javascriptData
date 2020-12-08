@@ -6,7 +6,7 @@
 #### [ 常用的 css 代码块 ](https://github.com/wang90/notes/blob/master/css/css_code.md)  
 #### [ 天气 icon 动画 ](https://github.com/wang90/notes/blob/master/css/weather.less)
 #### book
-##### [《CSS 权威指南 4th》中文翻译](http://gdut_yy.gitee.io/doc-csstdg4/ch1.html#_1-3-1-the-link-tag)
+##### [ 《CSS 权威指南 4th》中文翻译 ](http://gdut_yy.gitee.io/doc-csstdg4/ch1.html#_1-3-1-the-link-tag)
 
 ## Javascript
 #### [ 常用 Javascript 代码块 ](https://github.com/wang90/notes/blob/master/javascript/javascript_code.md)    
