@@ -14,8 +14,7 @@
 #### [ Javascript 数据结构 ](https://github.com/wang90/notes/blob/master/javascript/javascript_dataStructure.md)    
 #### [ 有趣的 Javascript ](https://github.com/wang90/notes/blob/master/javascript/javascript_interesting.md) 
 #### [ 现代 Javascript 官方 ](https://zh.javascript.info/)
-#### [ js兼容性查询网站（es5）]（https://caniuse.com/#feat=es5）
-
+#### [ js兼容性查询网站（es5) ](https://caniuse.com/#feat=es5)
 
 ## git
 #### [ git 使用笔记 ](https://github.com/wang90/notes/blob/master/git/git.md)
