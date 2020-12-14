@@ -216,6 +216,26 @@ function parseURL(url) {
     };
 }
 ````
+### url处理2
+````
+function getUrlParam( sUrl, sKey ) {
+    if ( sUrl.indexOf("?") === -1 ){
+      return null;
+    }
+    const left= sUrl.indexOf("?") + 1;
+    const right= sUrl.lastIndexOf("#");
+    const parasString = sUrl.slice(left, right);
+    const paras = parasString.split('&');
+    const parasjson = {};
+    paras.forEach(function ( value, index, arr ) {
+        var a = value.split('=');
+        parasjson[a[0]] !== undefined ? parasjson[a[0]] = [].concat(parasjson[a[0]], a[1]) : parasjson[a[0]] = a[1];
+    });
+
+    const result = arguments[1] !== void 0 ? (parasjson[arguments[1]] || '') : parasjson;
+    return result;
+}
+````
 ### xhr兼容性   
 ````
 function createXMLHttpObject() {
