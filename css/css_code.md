@@ -32,8 +32,13 @@
      viewport.setAttribute('content', 'width=device-width,initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no');
   }
   if (window.devicePixelRatio == 3) {
-     viewport.setAttribute('content', 'width=device-width,initial-scale=0.3333333333333333, maximum-scale=0.3333333333333333, minimum-scale=0.3333333333333333, user-scalable=no');
-            }
+     viewport.setAttribute('content', 
+        'width=device-width,
+        initial-scale=0.3333333333333333, 
+        maximum-scale=0.3333333333333333, 
+        minimum-scale=0.3333333333333333, 
+        user-scalable=no');
+  }
   var docEl = document.documentElement;
   var fontsize = 10 * (docEl.clientWidth / 320) + 'px';
   docEl.style.fontSize = fontsize;
