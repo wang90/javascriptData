@@ -18,7 +18,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;（行数）
+    -webkit-line-clamp: 2; /*（行数）*/
     -webkit-box-orient: vertical;
 `````
 ### 手机端1像素问题   
