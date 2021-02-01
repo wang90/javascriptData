@@ -62,6 +62,19 @@ declare module 'vue/types/vue' {
   }
 }
 ```````
+### vue 计算属性传值
+```````
+:data="closure(item, itemName, blablaParams)"
+
+computed: {
+ closure () {
+   return function (a, b, c) {
+        /** do something */
+        return data
+    }
+ }
+}
+```````
 
 
 
