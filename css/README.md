@@ -57,3 +57,12 @@
 ``````
 box-shadow: 0 0 6px 0 rgba(0,0,0,.1);
 ``````
+### 移动端点击蓝色背景阴影处理
+``````
+div,a,img {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select:none;
+}
+``````
