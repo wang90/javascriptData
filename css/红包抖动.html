@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .packet {
+      width: 180px;
+      height: 220px;
+      position: fixed;
+      bottom: 10%;
+      right: 20px;
+      color: #D60E19;
+      animation: shake .5s linear infinite;
+      background: url('./packet-icon') no-reapet;
+      background-size: cover;
+    }
+    @keyframes shake {
+      25% {
+        transform: rotate(7deg);
+      }
+      75% {
+        transform: rotate(-7deg);
+      }
+      50%,
+      100% {
+        transform: rotate(0);
+      }
+    }
+    </style>
+</head>
+<body>
+    <div class="packet"></div>
+</body>
+</html>
