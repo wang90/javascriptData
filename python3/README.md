@@ -24,3 +24,12 @@ query = {
     }
 }
 ``````
+
+## pymongo 使用db.collection.count() 过慢问题
+``````
+# Python3.7 安装 pymongo 模块
+# 无参数情况下
+db_count = cursor.estimated_document_count()
+# 有参数情况下
+db_count = cursor.count_documents({'status': 0})
+``````
