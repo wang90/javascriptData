@@ -18,3 +18,7 @@ npm ERR! If using a shrinkwrap, regenerate with "npm shrinkwrap".
 ``````
 npm config set package-lock false
 ``````
+### 发布一个包
+``````
+npm publish
+``````
