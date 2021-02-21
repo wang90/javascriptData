@@ -140,5 +140,12 @@ git checkout v1.0
 ``````
 git remote -v
 ``````
+### 拒绝合并无关历史
+``````
+# 当git pull origin master 时就出现了这样一条错误：
+fatal: refusing to merge unrelated histories  // 拒绝合并无关历史
+## 解决
+git pull origin master --allow-unrelated-histories 
+``````
 
 
