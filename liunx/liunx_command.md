@@ -144,4 +144,9 @@ vim .bash_profile
 alias qc='commod'
 source .bash_profile
 ``````
+### 启动后台命令
+``````
+nohup 命令 2>&1 &
+tail -f nohup.out
+``````
 
