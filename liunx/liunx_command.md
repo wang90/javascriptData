@@ -150,3 +150,8 @@ nohup 命令 2>&1 &
 tail -f nohup.out
 ``````
 
+### 打包文件
+``````
+tar -czvf txt.tar txt
+``````
+
