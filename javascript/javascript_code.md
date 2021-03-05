@@ -447,4 +447,15 @@ dom.addEventListener('touchend',function (e) {
     }
 })
 ```````
+### 下载图片
+```````
+const funDownload = function (content, filename='') {
+    console.log(filename)
+    const a = document.createElement('a')
+    a.href = content
+    a.download = ''
+    a.click()
+};
+
+```````
 
