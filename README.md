@@ -13,8 +13,8 @@
 #### [ Javascript 学习链接 ](https://github.com/wang90/notes/blob/master/javascript/javscript_url.md)    
 #### [ Javascript 数据结构 ](https://github.com/wang90/notes/blob/master/javascript/javascript_dataStructure.md)    
 #### [ 有趣的 Javascript ](https://github.com/wang90/notes/blob/master/javascript/javascript_interesting.md) 
-#### [ 现代 Javascript 官方 ](https://zh.javascript.info/)
-#### [ js兼容性查询网站（es5) ](https://caniuse.com/#feat=es5)
+#### [ 现代 Javascript 官方(外部链接) ](https://zh.javascript.info/)
+#### [ js兼容性查询网站（es5) (外部链接)](https://caniuse.com/#feat=es5)
 
 ## git
 #### [ git 使用笔记 ](https://github.com/wang90/notes/blob/master/git/git.md)
@@ -40,8 +40,8 @@
 ## linux
 #### [linux 命令](https://github.com/wang90/notes/blob/master/liunx/liunx_command.md)
 #### book
-##### [《鸟哥的 Linux 私房菜（基础学习篇）》](http://linux.vbird.org/linux_basic/)
-##### [《The Linux Command Line》](http://linuxcommand.org/tlcl.php)
+##### [《鸟哥的 Linux 私房菜（基础学习篇）》(外部链接)](http://linux.vbird.org/linux_basic/)
+##### [《The Linux Command Line》(外部链接)](http://linuxcommand.org/tlcl.php)
 
 
 ## Nginx
@@ -58,8 +58,8 @@
 #### [ FileSaver.js ](https://github.com/wang90/FileSaver.js)
 
 ## WEB 相对常用网站链接
-#### [中文站-Mozilla大宝库](https://developer.mozilla.org/zh-CN/docs/Web) 
-#### [英文站-StackOverflow](https://stackoverflow.com/)
+#### [中文站-Mozilla大宝库 (外部链接)](https://developer.mozilla.org/zh-CN/docs/Web) 
+#### [英文站-StackOverflow (外部链接)](https://stackoverflow.com/)
 
 
 
