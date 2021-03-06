@@ -154,4 +154,7 @@ tail -f nohup.out
 ``````
 tar -czvf txt.tar txt
 ``````
-
+### 文件传递
+```````
+scp -r (source) (target/当前使用.)
+```````
