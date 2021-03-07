@@ -33,3 +33,17 @@ db_count = cursor.estimated_document_count()
 # 有参数情况下
 db_count = cursor.count_documents({'status': 0})
 ``````
+
+## python3异步函数调用
+``````
+import asyncio
+
+def _init_():
+    print("_init_")
+    asyncio.create_task( init())
+    
+async init():
+    print("async init")
+    
+_init_()
+``````
