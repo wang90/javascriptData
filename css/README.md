@@ -66,3 +66,14 @@ div,a,img {
     user-select:none;
 }
 ``````
+### input focus 边框
+``````
+input:focus {
+    outline: none;
+}
+``````
+### 文字竖排
+``````
+writing-mode: vertical-lr;
+writing-mode: tb-lr; // ie
+``````
