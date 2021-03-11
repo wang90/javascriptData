@@ -47,3 +47,9 @@ async init():
     
 _init_()
 ``````
+### python3 dict排序
+``````
+ sort_data = sorted(words_data.items(), key = lambda kv:(kv[1], kv[0]),reverse=True) # 降序
+  sort_data = sorted(words_data.items(), key = lambda kv:(kv[1], kv[0])) # 升序
+ 
+``````
