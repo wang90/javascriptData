@@ -53,3 +53,8 @@ _init_()
   sort_data = sorted(words_data.items(), key = lambda kv:(kv[1], kv[0])) # 升序
  
 ``````
+### 字符串从后截取
+```````
+str = '12131312313'
+str = str[:-10] # 从后截取10个
+```````
