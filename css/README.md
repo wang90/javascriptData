@@ -77,3 +77,12 @@ input:focus {
 writing-mode: vertical-lr;
 writing-mode: tb-lr; // ie
 ``````
+### 自定义虚线
+``````
+.dashed {
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(to right, #ccc 0%, #ccc 50%, transparent 50%);
+    background-size: 8px 1px;
+}
+``````
