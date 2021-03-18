@@ -464,4 +464,12 @@ function sort(arr) {
     return arr.sort(function(a, b){return a - b}); 
 }
 ```````
+### 复制去掉标签
+````````
+document.querySelector("div.txt").addEventListener("paste", function(e) {
+  e.preventDefault();
+  const text = e.clipboardData.getData("text/plain");
+  document.execCommand("insertText", false, text);
+});
+````````
 
