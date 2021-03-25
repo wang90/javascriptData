@@ -1,4 +1,4 @@
-# 工作随笔
+# Technical documentation
 
 ## CSS
 #### [ css 重置浏览器 base 文件 ](./css/base.css)
