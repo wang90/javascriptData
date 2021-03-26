@@ -147,5 +147,9 @@ fatal: refusing to merge unrelated histories  // 拒绝合并无关历史
 ## 解决
 git pull origin master --allow-unrelated-histories 
 ``````
-
+### 新建分支并切换
+``````
+git checkout -b iss53
+Switched to a new branch "iss53"
+``````
 
