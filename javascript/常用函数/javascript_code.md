@@ -472,4 +472,8 @@ document.querySelector("div.txt").addEventListener("paste", function(e) {
   document.execCommand("insertText", false, text);
 });
 ````````
+### 原生获取属性dom
+document.querySelectorAll('div[data-xxx]');
+````
 
+````
