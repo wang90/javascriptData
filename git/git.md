@@ -33,8 +33,6 @@ drop：我要丢弃该commit（缩写:d）
 git pull = git fetch + git merge 
 ```````
 
-    
-
 ### git修改分支名字 
 ``````
 git branch -m oldbranchname newbranchname    
@@ -152,4 +150,19 @@ git pull origin master --allow-unrelated-histories
 git checkout -b iss53
 Switched to a new branch "iss53"
 ``````
+
+###  type（必须） : commit 的类别，只允许使用下面几个标识：
+```````
+feat : 新功能
+fix : 修复bug
+docs : 文档改变
+style : 代码格式改变
+refactor : 某个已有功能重构
+perf : 性能优化
+test : 增加测试
+build : 改变了build工具 如 grunt换成了 npm
+revert : 撤销上一次的 commit
+chore : 构建过程或辅助工具的变动
+```````
+
 
