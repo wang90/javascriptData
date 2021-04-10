@@ -86,3 +86,9 @@ writing-mode: tb-lr; // ie
     background-size: 8px 1px;
 }
 ``````
+### contenteditable去掉边框
+`````
+[contenteditable='true'] {
+    outline: none；
+}
+`````
