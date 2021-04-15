@@ -92,3 +92,11 @@ writing-mode: tb-lr; // ie
     outline: none；
 }
 `````
+### ::before绑定自定义属性
+``````
+<div data-content-before='before'></div>
+
+div::before {
+    content: attr(data-content-before);
+}
+``````
