@@ -33,6 +33,10 @@ db_count = cursor.estimated_document_count()
 # 有参数情况下
 db_count = cursor.count_documents({'status': 0})
 ``````
+### python3 下载并保存->requirements.txt
+`````
+pip install html2text && pip freeze | grep html2text >> requirements.txt
+`````
 
 ## python3异步函数调用
 ``````
