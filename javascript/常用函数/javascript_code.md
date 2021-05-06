@@ -473,7 +473,6 @@ document.querySelector("div.txt").addEventListener("paste", function(e) {
 });
 ````````
 ### 原生获取属性dom
-document.querySelectorAll('div[data-xxx]');
 ````
-
+document.querySelectorAll('div[data-xxx]')
 ````
