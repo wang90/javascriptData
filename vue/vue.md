@@ -75,6 +75,9 @@ computed: {
  }
 }
 ```````
-
+### fix vue.prototype error
+``````
+Vue.prototype._i18n = i18n
+``````
 
 
