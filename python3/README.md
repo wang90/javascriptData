@@ -62,3 +62,23 @@ _init_()
 str = '12131312313'
 str = str[:-10] # 从后截取10个
 ```````
+
+### pymongo 查询索引/ 设置索引
+```````
+// 获取索引
+coll_names =  await db_fiction.list_collection_names()
+print(coll_names)
+for coll_name in coll_names:
+    print("~~~~~~~~~~~~~~~")
+    # print(coll_name)
+    # one = await db_fiction[coll_name].find_one()
+    coll = db_fiction[coll_name]
+    # print(coll)
+    index_infomation = await coll.index_information()
+    print(index_infomation)
+// 设置索引
+await db_fiction.coll_names.create_index([("status", 1),("xid", 1)],unique = False, background = True)
+```````
+
+pip install html2text && pip freeze | grep html2text >> requirements.txt索引
+pip install html2text && pip freeze | grep html2text >> requirements.txt
