@@ -42,13 +42,13 @@ git branch -m oldbranchname newbranchname
 显示当前工作空间和提交的不同
 ``````
 # 显示工作目录和索引的不同
-$ git diff
+git diff
 
 # 显示索引和最近一次提交的不同
-$ git diff --cached
+git diff --cached
 
 # 显示工作目录和最近一次提交的不同
-$ git diff HEAD
+git diff HEAD
 ``````
 
 ### code review 的缩略词语！  
@@ -87,8 +87,8 @@ git remote prune origin
 ### 远程覆盖本地
 ```````
 git fetch --all
-$ git reset --hard origin/master 
-$ git pull
+git reset --hard origin/master 
+git pull
 ```````
 ### 强制覆盖远程分支
 ```````
