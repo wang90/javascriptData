@@ -82,3 +82,8 @@ await db_fiction.coll_names.create_index([("status", 1),("xid", 1)],unique = Fal
 
 pip install html2text && pip freeze | grep html2text >> requirements.txt索引
 pip install html2text && pip freeze | grep html2text >> requirements.txt
+
+## 解决 python3.6 安装python-devel error
+``````
+yum install python36-devel
+``````
