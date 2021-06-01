@@ -169,4 +169,11 @@ chore : 构建过程或辅助工具的变动
 search xxx-awesome
 ``````
 
+### linux 下安装 git
+`````
+yum install git 
+## 如果有下面报错
+## Error: This command has to be run with superuser privileges (under the root user on most systems).
+# sudo yum install git  
+`````
 
