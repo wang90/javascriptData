@@ -87,3 +87,17 @@ pip install html2text && pip freeze | grep html2text >> requirements.txt
 ``````
 yum install python36-devel
 ``````
+
+## python使用环境变量
+```````
+# 设置
+vi ~/.bash_profile
+# 添加
+export TEST="test"
+# 重启
+source ~/.bash_profile
+
+# python 中获取
+TEST = os.getenv('TEST')
+
+```````
