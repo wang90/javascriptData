@@ -100,3 +100,9 @@ div::before {
     content: attr(data-content-before);
 }
 ``````
+### 好玩的css网站链接
+1. https://lhammer.cn/You-need-to-know-css/#/zh-cn/
+2. https://chokcoco.github.io/CSS-Inspiration/#/
+3. https://qishaoxuan.github.io/css_tricks/
+4. https://tobiasahlin.com/spinkit/
+5. https://animista.net/
