@@ -12,7 +12,7 @@
 ````
 <a href="https://www.baidu.com">www.baidu.com</a>
 ````
-- #谋点
+- 锚点
 ````
 <div id="div"></div>
 //...
